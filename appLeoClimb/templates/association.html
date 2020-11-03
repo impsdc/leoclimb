@@ -1,0 +1,165 @@
+{% extends "layouts/base.html" %}
+
+{% block content %%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>À propos de LeoClimb</title>
+    <link rel="icon" href="{% static "images/logoNoir.jpg" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mdb.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.js"></script>
+    <style>
+      body {
+    margin:0 auto;
+    width: 100%;
+    overflow-x: hidden;
+    }
+    footer {
+      width:105%;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/Accueil">
+        <img src="{% static "images/logoBlancNom.jpg" %}" alt="Logo association"  height="50" width="50" />
+      </a>
+      <a class="navbar-brand" href="/Accueil">Accueil</a>
+      <a class="navbar-brand" href="/DCC">Devinci Climbing Contest</a>
+      <a class="navbar-brand" href="/Evenements">Nos évènements</a>
+      <a class="navbar-brand" href="/Actualites">News</a>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+       L'association
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/Notre-association">À propos de LeoClimb</a>
+          <a class="dropdown-item" href="/Le-bureau">Le bureau LeoClimb</a>
+          <a class="dropdown-item" href="/Collections-LeoClimb">Collections LeoClimb</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/Partenaires">Nos partenaires</a>
+        </div>
+      </div>
+      <div class="col"></div>
+      <div class="col-sm-4 col-l-4 col-xl-4 col-md-2">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1 text-white" href="https://www.facebook.com/LeoClimbPULV/">
+            <i class="fab fa-facebook-f text-white"> </i>
+            LeoClimb
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1 text-white" href="https://www.instagram.com/leoclimb/">
+            <i class="fab fa-instagram text-white"> </i>
+          LeoClimb Officiel
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1 text-white" href="https://www.instagram.com/leoclimb_squad/">
+            <i class="fab fa-instagram text-white"></i>
+                    LeoClimb Squad
+          </a>
+        </li>
+      </div>
+    </nav>
+    <br><br><br><br><br><br class="d-sm-block d-xl-none"><br class="d-sm-block d-xl-none">
+  <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/mdb.js' %}"></script>
+  <div class="offset-xl-1 col-xl-10 text-center">
+    <img src="{% static "images/logoNoir.jpg" %}" alt="Logo asso" width="300" height="300"  />
+    <h1>Qui sommes-nous ?</h1>
+    <p align="justify">Des sessions de grimpe collectives, un esprit de famille, des évènements inter-écoles et des cours de sport proposés par les membres. Voilà une infime partie de tous les ingrédients qui composent Léoclimb. En effet, depuis 2 ans nous cherchons à rapprocher les gens. Aussi bien au sein du pôle étudiant Léonard de Vinci qu’entre les écoles d’ingénieurs d’Ile-de-France telles que L’ESTACA, L’EPF ou encore l’ESME, autour de cette passion commune qui nous anime: l’escalade. Cela passe bien sûr, d’un côté, par des épisodes réguliers de grimpe, où un bon nombre des membres de l’association se retrouvent dans différentes salles de la région parisienne pour découvrir de nouveaux murs, s’entraîner ensemble et se détendre, ou encore avec des évènements de plus grande envergure comme le Devinci Climbing Contest. D’un autre côté, cela passe aussi par des moments bien plus conviviaux comme les fameux “japonais à volonté” bien connus des membres, des soirées mémorables et d’une manière plus générale, des moments de partage pendant lesquels l’esprit du grimpeur n’est pas nécessairement aussi présent. Ainsi, les membres ont l’opportunité de renforcer les liens très forts qui existent déjà entre eux ou d’en tisser des nouveaux.</p>
+    <br>
+    <h1>Nos objectifs </h1>
+    <p align="justify">Nos objectifs sont la création d’un maximum d’événements à différentes échelles (séance libre, séance d'initiation ouvert à tous, participation à des compétitions, organisation de week-end à Fontainebleau, organisation d’événements inter-universitaires, etc.). Ceux-ci permettant de regrouper toute personne intéressée ou passionnée d’escalade. Cela englobe aussi bien nos membres que des étudiants de notre établissement, des étudiants du supérieur ou même des collégiens. Nous souhaitons avant tout partager notre passion avec un maximum de personnes peu importe nos différences.
+    Nous visons également à nous surpasser d’année en année, afin de créer des événements les plus ambitieux possibles (création de compétition inter-universitaire, organisation de voyage en Europe). Nous souhaitons aussi conserver une association structurée, dynamique et ayant un poids important dans la vie associative de notre école.
+    </p>
+    <br><h1>Vidéo présentation de l'association</h1>
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/nCmbzUzCHG4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+    <hr class="featurette-divider">
+    <div class="row">
+      <div class="col-2 col-sm-3 col-md-3,5 col-l-2 col-xl-2">
+      </div>
+      <div class="offset-sm-1 offset-xl-0 col-xl-3,5 col-l-3,5">
+        <img src="{% static "images/bureau/aureFondateur.jpg" %}" alt="Président de l'asso" height="400" width="400" />
+      </div>
+      <div class="offset-sm-1 offset-1 col-10 col-sm-10 col-l-4 col-xl-5 text-center">  <br>
+        <h1 class="text-center">Fondateur de l'association LeoClimb</h1>
+        <p align="justify">Mot du fondateur, Aurélien Grenet--de Béchillon : "J'ai souhaité créer cette association dans le but de regrouper tous les passionnés d'escalade pour ainsi partager cette passion commune autour du sport. Mon rêve est que cette association perdure dans le temps, qu'elle permette de créer de nombreuses amitiés entre passionnés, créer des événements innovants promouvant la pratique de l'escalade au sein de la vie étudiante de notre éclole."</p><br>
+        <h4 class="text-center">Création de l'association en 2018</h4>
+      </div>
+    </div>
+    <br>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+  <!-- Footer Elements -->
+  <div class="container" >
+    <div class="row">
+      <div class="col text-center">
+      Nos réseaux sociaux
+      </div>
+      <div class="col text-center">
+      Nous contacter
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/LeoClimbPULV/">
+              <i class="fab fa-facebook-f"> </i>
+            LeoClimb
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1" href="https://www.instagram.com/leoclimb/">
+              <i class="fab fa-instagram"> </i>
+            LeoClimb Officiel
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1" href="https://www.instagram.com/leoclimb_squad/">
+              <i class="fab fa-instagram"></i>
+            LeoClimb Squad
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+      </div>
+      <div class="col text-center">
+          leoclimbpulv@gmail.com
+      </div>
+    </div>
+    <!-- Footer Elements -->
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright bg-dark text-center py-3">© 2020 Copyright:
+    <a href="https://LeoClimb.com/"> LeoClimb.com</a>
+    <text class="text-white"> / Created by Samy BONTEMPS </text>
+    <a href="https://www.facebook.com/samy.bontemps">
+      <i class="fab fa-facebook-f"> </i>
+    </a>
+    <a href="https://www.instagram.com/samy_bps/">
+      <i class="fab fa-instagram"> </i>
+    </a>
+    <a href="https://www.linkedin.com/in/samy-bontemps-079683195/">
+      <i class="fab fa-linkedin"></i>
+    </a>
+      <a href="https://www.youtube.com/channel/UCBBQgF4GaZGg1msvcCLuM5A">
+        <i class="fab fa-youtube"></i>
+      </a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+</html>

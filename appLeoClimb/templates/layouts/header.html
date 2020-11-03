@@ -1,0 +1,43 @@
+{% load static %}
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/Accueil">
+        <img src="{% static "images/logoBlancNom.jpg" %}" alt="Logo d'association" height="50" width="50" />
+      </a>
+      <a class="navbar-brand" href="/Accueil">Accueil</a>
+      <a class="navbar-brand" href="/DCC">Devinci Climbing Contest</a>
+      <a class="navbar-brand" href="/Evenements">Nos évènements</a>
+      <a class="navbar-brand" href="/Actualites">News</a>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">L'association</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/Notre-association">À propos de Leoclimb</a>
+          <a class="dropdown-item" href="/Le-bureau">Le bureau Leoclimb</a>
+          <a class="dropdown-item" href="/Collections-LeoClimb">Collections LeoClimb</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/Partenaires">Nos partenaires</a>
+        </div>
+      </div>
+      <div class="col"></div>
+      <div class="col-sm-4 col-l-4 col-xl-4 col-md-2">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1 text-white" href="https://www.facebook.com/LeoClimbPULV/">
+            <i class="fab fa-facebook-f text-white"> </i>
+          LeoClimb
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1 text-white" href="https://www.instagram.com/leoclimb/">
+            <i class="fab fa-instagram text-white"> </i>
+        LeoClimb Officiel
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1 text-white" href="https://www.instagram.com/leoclimb_squad/">
+            <i class="fab fa-instagram text-white"></i>
+                  LeoClimb Squad
+          </a>
+        </li>
+      </div>
+    </nav>
+  </header>
