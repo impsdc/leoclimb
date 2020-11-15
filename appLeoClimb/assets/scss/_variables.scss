@@ -1,0 +1,87 @@
+$color-brand: #0D3F62;
+$color-blue: #176FAD;
+$color-font: #000000;
+
+$letter-spacing-small: .2px;
+$letter-spacing-normal: .3px;
+
+$phone: 375px;
+$mobile: 768px;
+$small: 992px;
+$desktop: 1599px;
+
+$cubicOnly: cubic-bezier(.5, .6, .51, .92);
+$cubic: .3s $cubicOnly;
+
+@mixin max-screen($res) {
+    @media screen and (max-width: $res) {
+      @content;
+    }
+  }
+
+@mixin max-screen-height($res) {
+  @media screen and (max-height: $res) {
+    @content;
+  }
+}
+
+@mixin max-screen-height-for-desktop($res, $resWith){
+  @media screen and (max-height: $res) and (min-width: $resWith){
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: $res) {
+      @content;
+  }
+}
+#___gatsby{
+  min-height: 100%;
+  overflow: hidden;
+}
+
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+main{
+  position: relative;
+  min-height: 79vh;
+  font-family: 'Raleway';
+}
+a{
+  color: #000000;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Raleway';
+  color: #000000;
+  transition: all ease-out .3s;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  transition: .45s opacity, color $cubic;
+}
+
+li{
+  margin: 0;
+  margin-bottom: 0;
+}
+
+@include max-screen($small){
+  .circles{
+    display: none;
+  }
+}
