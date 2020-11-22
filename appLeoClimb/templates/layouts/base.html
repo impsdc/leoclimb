@@ -1,5 +1,6 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     {% include 'layouts/head.html' %}
 <body>
     
@@ -10,6 +11,8 @@
     {% block script %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="module" src="http://127.0.0.1:8080/static/main.js"></script>
+    <script type="module" src="{% static '/main.js' %}"></script>
     {% endblock %}
 </body>
 </html>

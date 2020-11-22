@@ -1,0 +1,181 @@
+.onTop .header-component{
+  box-shadow: none;
+}
+
+.is-menu-open{
+  overflow: hidden;
+}
+.header-component{
+    width: 100%;
+    height: auto;
+    background-color: $color-brand;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.16);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index:1 ;
+
+    .logo-component{
+      width: 55px;
+    }
+
+    .row{
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-component{
+        z-index: 100;
+        margin-top: 28px;
+        overflow-y: auto;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        height: 150vh;
+        max-height: 0;
+        background-color: $color-brand;
+        text-align: center;   
+        -webkit-transition: max-height 0.3s cubic-bezier(0.5, 0.6, 0.51, 0.92);
+        transition: max-height 0.3s cubic-bezier(0.5, 0.6, 0.51, 0.92);
+
+      @include min-screen($mobile){
+      position: static;
+      margin-top: 0;
+      height: auto;
+      max-height: none !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      padding-right: 0;
+      overflow: hidden;
+    
+      }
+      
+      nav ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
+
+          @include max-screen($mobile){
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 75px;
+          }
+        li{
+          margin: 15px;
+
+          @include max-screen($mobile){
+            margin: 40px 0;
+           }
+
+          a{
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            padding: 0 15px;
+            color: $white;
+
+            @include max-screen($mobile){
+              font-size: 1.4375rem;
+              font-weight: 700;
+              letter-spacing: 0.3px;
+            }
+            
+            &:hover{
+              opacity: 0.3;
+            }
+
+          }
+        }
+      }
+      .btn{
+        margin-bottom: 40px;
+        @include min-screen($mobile){
+          display: none;
+      
+        }
+      }
+        #reseaux{
+          display: none;
+          @include max-screen($mobile){
+            display: flex;
+            justify-content: center;
+          }
+        }      
+    }
+    .navbar-toggler {
+        @include z-index(navigationToggler);
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        padding: 3px 4px 3px;
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+  
+        @include min-screen($mobile) {
+          display: none;
+        }
+  
+        &.active {
+          &:hover {
+            background-color: rgba($color-brand, .1);
+  
+            .navbar-toggler-icon {
+              background-color: $black;
+            }
+          }
+  
+          .navbar-toggler-icon {
+            width: 30px;
+            
+            span{
+              
+            }
+            &:first-child {
+              transform: translate(3px, 0) rotate(45deg);
+            }
+  
+            &:nth-child(2) {
+              opacity: 0;
+            }
+  
+            &:last-child {
+              transform: translate(3px, 1px) rotate(-48deg);
+            }
+          }
+        }
+  
+        .navbar-toggler-icon {
+          transform: rotate(0);
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: $white;
+          transform-origin: 0;
+          transition: opacity $transition, transform $transition, background-color $transition;
+  
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+}

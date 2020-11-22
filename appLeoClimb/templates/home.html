@@ -1,34 +1,9 @@
 {% extends "layouts/base.html" %}
 {% load static %}
 {% block content %}
-    <br><br><br>    <br class="d-sm-block d-xl-none"> <br class="d-sm-block d-xl-none d-md-none">    <br class="d-sm-block d-xl-none"> <br class="d-sm-block d-xl-none d-md-none">
-    <div class="row">
-      <div class="offset-lg-1 offset-xl-0 col col-xl-6,5 text-xl-left text-sm-center">
-        <img src="{% static "images/shootingAsso.jpg" %}" alt="Shooting asso" height="478" width="718" />
-      </div>
-      <div class="offset-sm-1 offset-lg-1 offset-xl-0 col col-xl-5,5 text-center">
-        <br>
-        <img src="{% static "images/logoNoir.jpg" %}" alt="Logo asso" width="150" height="150" />
-        <h1 class='titre-home'> Association d'escalade du pôle universitaire Léonard de Vinci </h1>
-        <p class="col-xl-12">
-Une association, que dire, une famille soudée au sein de laquelle chaque membre s'épanouit par les différents évènements centré sur la pratique de l'escalade ainsi que par l'ambiance générale du groupe !
-N'hésitez pas à parcourir notre site pour nous découvrir ou nous contacter via nos réseaux pour toutes informations, sponsonariats !</p>
-      </div>
+  <section class="home-component">
+    <div class="container" style="height: 200vh; background:red">
+
     </div>
-    <br>
-    <hr class="featurette-divider">
-    <div class="row">
-      <div class="col col-xl-5,5 text-center">
-        <img src="{% static "images/logoContest.jpg" %}" alt="Logo contest" width="250" height="300"  />
-        <h1> Devinci Climbing Contest </h1>
-        <p class="col-xl-12" align="justify">La compétition d’escalade étudiante inter-école à ne pas louper ! Cette compétition est ouverte à tous les niveaux, débutant en escalade comme confirmé. Avant d'être une compétition, c'est un évènement convivial, donc n'hésites pas, viens ! </p>
-        <a href="/DCC">
-          <button type="button" class="btn btn-dark">En savoir plus</button>
-        </a>
-      </div>
-      <div class="col col-xl-6,5 text-center">
-        <br>
-        <img src="{% static "images/drapeauLogo.jpg" %}" alt="Drapeau de l'association" height="530" width="800"  />
-      </div>
-    </div>
+  </section>
 {% endblock %}

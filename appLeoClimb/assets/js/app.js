@@ -1,4 +1,2 @@
-
-import "./index.js"
-
-console.log('lsss')
+import "./helpers.js"
+import './modules/menu'

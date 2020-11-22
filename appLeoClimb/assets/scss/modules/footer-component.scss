@@ -1,0 +1,110 @@
+.footer-component{
+    background-image: url('/static/images/bg_footer.png');
+    background-size: cover;
+    height: auto;
+    background-repeat: no-repeat;
+    padding: 100px 0 50px;
+    z-index: 0;
+
+    @include max-screen(1100px){
+        background-position: center;
+    }
+
+    @include max-screen($mobile){
+        padding:50px 0 20px;
+    }
+    .contain-logo{
+        display: block;
+        margin: auto;
+        text-align: center;
+        a{
+            img{
+                width: 130px;
+            }
+        }
+    }
+
+    .main{
+        margin: auto;
+
+        .nav-footer{
+            ul{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                li{
+                    padding: 0 15px;
+
+                    @include max-screen($mobile){
+                        padding: 10px 30px;
+                    }
+
+                    a{
+                        color: $white;
+
+                        &:hover{
+                            opacity: 0.3;
+                        }
+                    }
+                }
+            }
+        }
+        span{
+            display: block;
+            width: 100%;
+            margin: 20px 0;
+            height: 2px;
+            border-radius: 20px;
+            background: $color-yellow;
+        }
+
+        .under-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include max-screen($mobile){
+                flex-direction: column-reverse;
+               justify-content: center;
+            }
+
+            div{
+                color: $white;
+                display: flex;
+                align-items: center;
+
+                @include max-screen($mobile){
+                    flex-direction: column;
+
+                    p{
+                        padding:5px;
+                    }
+                }
+
+                p{
+                    margin: 0;
+                    padding-right: 10px;
+                }
+           
+            }
+
+
+            .contact{
+                display: flex;
+
+                @include max-screen($mobile){
+                    flex-direction: column-reverse;
+
+                    p{
+                        padding: 5px;
+                    }
+
+                    ul{
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

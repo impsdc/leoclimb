@@ -33,40 +33,40 @@ def page_evenements(request):
 
 #Fonction qui dirige vers la page "Shooting" du site.
 def page_evenements_shooting2019(request):
-	return render(request, 'shooting2019.html')
+	return render(request, 'evenements/shooting2019.html')
 
 #Fonction qui dirige vers la page "Remise 2019" du site.
 def page_evenements_remise2019(request):
-	return render(request, 'remise2019.html')
+	return render(request, 'evenements/remise2019.html')
 
 #Fonction qui dirige vers la page "WEI 2019" du site.
 def page_evenements_WEI2019(request):
-	return render(request, 'WEI2019.html')
+	return render(request, 'evenements/WEI2019.html')
 
 #Fonction qui dirige vers la page "Murmur 2019" du site.
 def page_evenements_murmur2019(request):
-	return render(request, 'murmurIssy2019.html')
+	return render(request, 'evenements/murmurIssy2019.html')
 
 #Fonction qui dirige vers la page "A l'étranger" du site.
 def page_evenements_leoclimbEtranger2019(request):
-	return render(request, 'leoclimbEtranger2019.html')
+	return render(request, 'evenements/leoclimbEtranger2019.html')
 
 #Fonction qui dirige vers la page "Nous soutenir" du site.
 def page_evenements_contestBB2019(request):
-	return render(request, 'contestBB2019.html')
+	return render(request, 'evenements/contestBB2019.html')
 
 #Fonction qui dirige vers la page "DCC 2019 photo" du site.
 def page_evenements_DCC2019(request):
-	return render(request, 'DCC2019photo.html')
+	return render(request, 'evenements/DCC2019photo.html')
 
 #Fonction qui dirige vers la page "DCC page" du site.
 def page_evenements_DCC(request):
-	return render(request, 'DCC2019page.html')
+	return render(request, 'evenements/DCC2019page.html')
 
 #Fonction qui dirige vers la page "JPO 2020" du site.
 def page_evenements_jpo2020(request):
-	return render(request, 'jpo2020.html')
+	return render(request, 'evenements/jpo2020.html')
 
 #Fonction qui dirige vers la page "Murmur 2020" du site.
 def page_evenements_murmur2020(request):
-	return render(request, 'murmurIssy2020.html')
+	return render(request, 'evenements/murmurIssy2020.html')

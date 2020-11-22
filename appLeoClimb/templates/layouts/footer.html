@@ -1,64 +1,55 @@
-<!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
-    <!-- Footer Elements -->
-    <div class="container" >
-      <div class="row">
-        <div class="col text-center">
-        Nos réseaux sociaux
-        </div>
-        <div class="col text-center">
-        Nous contacter
-        </div>
-      </div>
-      <div class="row">
-        <div class="col text-center">
-        <!-- Social buttons -->
-          <ul class="list-unstyled list-inline">
-            <li class="list-inline-item">
-              <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/LeoClimbPULV/">
-                <i class="fab fa-facebook-f"> </i>
-            LeoClimb
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-tw mx-1" href="https://www.instagram.com/leoclimb_squad/">
-                <i class="fab fa-instagram"> </i>
-            LeoClimb Officiel
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-li mx-1" href="https://www.instagram.com/leoclimb/">
-                <i class="fab fa-instagram"></i>
-            LeoClimb Squad
-              </a>
-            </li>
-          </ul>
-          <!-- Social buttons -->
-        </div>
-        <div class="col text-center">
-            leoclimbpulv@gmail.com
-        </div>
-      </div>
-      <!-- Footer Elements -->
+{% load static %}
+<footer class="footer-component">
+  <div class="main col-md-10">
+    <div class="contain-logo">
+       <a href="#">
+          <img src="{% static "images/logoBlancNom.jpg" %}" />
+       </a>
     </div>
-    <!-- Copyright -->
-    <div class="footer-copyright bg-dark text-center py-3">
-      © 2020 Copyright:
-      <a href="https://LeoClimb.com/"> LeoClimb.com</a>
-      <text class="text-white"> / Created by Samy BONTEMPS  </text>
-        <a href="https://www.facebook.com/samy.bontemps">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-        <a href="https://www.instagram.com/samy_bps/">
-          <i class="fab fa-instagram"> </i>
-        </a>
-        <a href="https://www.linkedin.com/in/samy-bontemps-079683195/">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCBBQgF4GaZGg1msvcCLuM5A">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <!-- Social buttons -->
+      <nav class="nav-footer">
+        <ul>
+          <li>
+            <a href="">Accueil</a>
+          </li>
+          <li>
+            <a href="">Galerie</a>
+          </li>
+          <li>
+            <a href="">Actualité</a>
+          </li>
+          <li>
+            <a href="">Devinci Climbing Contest</a>
+          </li>
+          <li>
+            <a href="">Nos membres</a>
+          </li>
+          <li>
+            <a href="">merchandising</a>
+          </li>
+        </ul>
+      </nav>
+      <span></span>
+      <div class="under-footer">
+       <div>
+          <p>
+              <a>Mentions légales</a>
+          </p>
+          <p>Copyright © Leoclimb, 2020</p>
+       </div>
+       <div class="contact">
+         <p>leoclimbpulv@gmail.com</p>
+         <ul id="reseaux">
+           <li>
+             <a href="https://www.instagram.com/leoclimb/" target="_blank"><i class="fab fa-instagram"></i></a>
+           </li>
+           <li>
+             <a href="https://www.facebook.com/LeoClimbPULV" target="_blank"><i class="fab fa-facebook-f"></i></a>
+           </li>
+           <li>
+             <a href="https://www.instagram.com/leoclimb_squad/" target="_blank"><i class="fab fa-instagram"></i></a>
+           </li>
+         </ul>
+       </div>
       </div>
-      <!-- Copyright -->
-    </footer>
+  </div>
+</footer>

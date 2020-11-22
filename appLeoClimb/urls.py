@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'^Evenements/Contest-Blocbuster-2019/$', views.page_evenements_contestBB2019), #url relié à notre fonction "page_evenements_contestBB2019"
     url(r'^Evenements/WEI-2019/$', views.page_evenements_WEI2019), #url relié à notre fonction "page_evenements_WEI2019"
     url(r'^Evenements/Remise-Collection-2019/$', views.page_evenements_remise2019), #url relié à notre fonction "page_evenements_remise2019"
-    url(r'^Evenements/LeoClimb-Etranger-2019/$', views.page_evenements_leoclimbEtranger2019), #url relié à notre fonction "page_evenements_leoclimbEtranger2019"
+    url(r'^Evenements/LeoClimb-Etranger-2019/$', views.page_evenements_leoclimbEtranger2019),
     url(r'^Evenements/Murmur-2019/$', views.page_evenements_murmur2019), #url relié à notre fonction "page_evenements_murmur2019"
     url(r'^Evenements/DCC-2019/$', views.page_evenements_DCC2019), #url relié à notre fonction "page_evenements_DCC2019"
     url(r'^DCC/$', views.page_evenements_DCC), #url relié à notre fonction "page_evenements_DCC"
