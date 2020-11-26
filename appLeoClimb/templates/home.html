@@ -2,8 +2,119 @@
 {% load static %}
 {% block content %}
   <section class="home-component">
-    <div class="container" style="height: 200vh; background:red">
-
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 banner-title">
+         <div>
+            <h1>Association d'escalade du pôle universitaire
+              Léonard de Vinci</h1>
+            <h2><strong>LeoClimb</strong><br>Pour te faire grimper au 7ème ciel</h2>
+         </div>
+          <a class="main-btn-component">Devinci Climbing Contest</a>
+        </div>
+        <div class="col-12 col-lg-4 banner-image">
+          <img src="{% static "/images/logo_sweat.png" %}" />
+        </div>
+      </div>
     </div>
   </section>
+  <div class="container">
+      <section class="intro-component col-12 col-lg-10">
+        <p>
+          Une association, que dire, une famille soudée au sein de laquelle chaque membre
+          s'épanouit par les différents évènements centré sur la pratique de l'escalade ainsi
+          que par l'ambiance générale du groupe ! N'hésitez pas à parcourir notre site pour
+          nous découvrir ou nous contacter via nos réseaux pour toutes informations,
+          sponsonariats !
+        </p>
+      <img src="{% static "/images/shootingAsso1.jpg" %}"/>
+    </section>
+    <section class="main-home-text-component col-12">
+        <h3 class="title">L'association en quelques voies</h3>
+        <p>Des sessions de grimpe collectives, un esprit de famille, des évènements inter-écoles et des cours de sport proposés par les membres. Voilà une
+          infime partie de tous les ingrédients qui composent Léoclimb.</p>
+        <p>En effet, depuis 2 ans nous cherchons à rapprocher les gens. Aussi bien au sein du pôle étudiant Léonard de Vinci qu’entre les écoles
+          d’ingénieurs d’Ile-de-France telles que L’ESTACA, L’EPF ou encore l’ESME, autour de cette passion commune qui nous anime: l’escalade. Cela
+          passe bien sûr, d’un côté, par des épisodes réguliers de grimpe, où un bon nombre des membres de l’association se retrouvent dans différentes
+          salles de la région parisienne pour découvrir de nouveaux murs, s’entraîner ensemble et se détendre, ou encore avec des évènements de plus
+          grande envergure comme le Devinci Climbing Contest.</p>
+        <p>D’un autre côté, cela passe aussi par des moments bien plus conviviaux comme les fameux “japonais à volonté” bien connus des membres, des
+          soirées mémorables et d’une manière plus générale, des moments de partage pendant lesquels l’esprit du grimpeur n’est pas nécessairement
+          aussi présent. Ainsi, les membres ont l’opportunité de renforcer les liens très forts qui existent déjà entre eux ou d’en tisser des nouveaux.</p>
+        <div class="row contain-ic">
+          <img src="{% static "/ic/food.svg" %}" alt="association d'escalade" />
+          <img src="{% static "/ic/climb.svg" %}" alt="association d'escalade" />
+          <img src="{% static "/ic/beer.svg" %}" alt="association d'escalade" />
+        </div>
+        <h3 class="title">Nos objectif</h3>
+        <p>Nos objectifs sont la création d’un maximum d’événements à différentes échelles (séance libre, séance d'initiation ouvert à tous, participation à
+          des compétitions, organisation de week-end à Fontainebleau, organisation d’événements inter-universitaires, etc.). Ceux-ci permettant de
+          regrouper toute personne intéressée ou passionnée d’escalade. Cela englobe aussi bien nos membres que des étudiants de notre
+          établissement, des étudiants du supérieur ou même des collégiens. Nous souhaitons avant tout partager notre passion avec un maximum de
+          personnes peu importe nos différences. Nous visons également à nous surpasser d’année en année, afin de créer des événements les plus
+          ambitieux possibles (création de compétition inter-universitaire, organisation de voyage en Europe). Nous souhaitons aussi conserver une
+          association structurée, dynamique et ayant un poids important dans la vie associative de notre école.</p>
+    </section>
+    <section class="sponsor-component col-12">
+      <h3 class="title">Nos Partenaires</h3>
+        <div class="sponsor-slider-wrapper">
+          <div class="slider-component">
+              <div class="item-slider">
+                <img src="{% static "./images/partenaires/blocbuster.png" %}" />
+                <p>
+                  Blocbuster est la nouvelle alternative aux salles de
+                  sport classiques, beaucoup plus accessible que
+                  l’escalade sur cordes, avec l’escalade en bloc plus
+                  besoin de partenaires pour s’assurer, aucune
+                  technique « compliquée » à maîtriser. L’activité est
+                  ouverte à tous, conviviale et ludique, elle permet
+                  rencontres et échanges.
+                </p>
+              </div>
+              <div class="item-slider">
+                <img src="{% static "./images/partenaires/avc.png" %}" />
+                <p>
+                  Blocbuster est la nouvelle alternative aux salles de
+                  sport classiques, beaucoup plus accessible que
+                  l’escalade sur cordes, avec l’escalade en bloc plus
+                  besoin de partenaires pour s’assurer, aucune
+                  technique « compliquée » à maîtriser. L’activité est
+                  ouverte à tous, conviviale et ludique, elle permet
+                  rencontres et échanges.
+                </p>
+              </div>
+              <div class="item-slider">
+                <img src="{% static "./images/partenaires/petzel.png" %}" />
+                <p>
+                  Blocbuster est la nouvelle alternative aux salles de
+                  sport classiques, beaucoup plus accessible que
+                  l’escalade sur cordes, avec l’escalade en bloc plus
+                  besoin de partenaires pour s’assurer, aucune
+                  technique « compliquée » à maîtriser. L’activité est
+                  ouverte à tous, conviviale et ludique, elle permet
+                  rencontres et échanges.
+                </p>
+              </div>
+              <div class="item-slider">
+                <img src="{% static "./images/partenaires/ldv.png" %}" />
+                <p>
+                  Blocbuster est la nouvelle alternative aux salles de
+                  sport classiques, beaucoup plus accessible que
+                  l’escalade sur cordes, avec l’escalade en bloc plus
+                  besoin de partenaires pour s’assurer, aucune
+                  technique « compliquée » à maîtriser. L’activité est
+                  ouverte à tous, conviviale et ludique, elle permet
+                  rencontres et échanges.
+                </p>
+              </div>
+          </div>
+          <div class="slider-btn-component">
+            <div class="slider-btn-wrapper">
+              <button id="sliderNext" class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>  
+              <button id="sliderPrev" class="flickity-button flickity-prev-next-button previous" type="button" aria-label="Previous"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button>
+            </div>
+          </div>
+        </div>
+    </section>  
+  </div>
 {% endblock %}

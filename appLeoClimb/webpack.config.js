@@ -1,7 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  entry: path.resolve(__dirname, "./assets/js/app.js"),
+  entry:
+    path.resolve(__dirname, "./assets/js/app.js"),
   mode:"development",
   output: {
     path: path.resolve(__dirname, "./static/"),
@@ -15,5 +16,5 @@ module.exports = {
     contentBase:  __dirname + '/static',
     watchContentBase: true,
     compress: true,
-  }
+  }, 
 };

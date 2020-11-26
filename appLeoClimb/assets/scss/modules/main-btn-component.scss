@@ -1,0 +1,19 @@
+.main-btn-component{
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 16px;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 24px 11px;
+    border-radius: 7px;
+    color: #ffffff;
+    border: 1px solid $color-yellow;
+    background-color: transparent;
+    letter-spacing: 0.3px;
+    transition: $cubic;
+  
+    &:hover{
+      color: #ffffff;
+      background-color: $color-yellow;
+    }
+}

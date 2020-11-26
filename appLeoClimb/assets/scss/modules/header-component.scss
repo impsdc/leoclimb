@@ -1,4 +1,4 @@
-.onTop .header-component{
+.on-top .header-component{
   box-shadow: none;
 }
 
@@ -16,6 +16,7 @@
     left: 0;
     top: 0;
     z-index:1 ;
+    transition: 0.45s;
 
     .logo-component{
       width: 55px;

@@ -5,8 +5,11 @@
 
 @import "modules/header-component";
 @import "modules/footer-component";
-
-
+@import "libs/slick";
+@import "modules/main-btn-component";
+@import "modules/title-component";
+@import "modules/home-component";
+@import "modules/sponsor-component";
 
 body {
   background: #fff;
@@ -17,7 +20,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
  }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .container{
       max-width: 1400px;
   }

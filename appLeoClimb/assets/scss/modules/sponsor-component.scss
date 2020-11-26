@@ -1,0 +1,99 @@
+.sponsor-component{
+    text-align: center;
+
+    .sponsor-slider-wrapper{
+        padding: 20px 0;
+        overflow: hidden;
+
+        .slider-component{
+
+            .item-slider{
+                display: block;
+                width: 500px;
+                padding: 20px;
+                margin: 0 30px;
+                height: 350px;
+                background-color: #fff;
+                border: 1px solid $color-brand;
+                border-radius: 15px;
+                
+                img{
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 20px;
+                    filter: grayscale(1);
+                }
+                p{
+                    margin-top: auto;
+                }
+            }
+        
+            .slick-dots{
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+        
+                li{
+                   
+                    button{
+                        margin: 0 20px;
+                        width: 20px;
+                        height: 20px;
+                        background: transparent;
+                        border: 2px solid $color-yellow;
+                        border-radius: 50px;
+                        text-indent:99999999999999px;
+                        opacity: .5;
+                        outline: none;
+                    }
+        
+                    &.slick-active{
+                        button{
+                            background: $color-yellow;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider-btn-wrapper{
+            position: relative;
+            margin: 0 auto;
+            max-width: 1167px;
+
+            #sliderNext{
+                outline: none;
+                border:1px solid $color-brand;
+                z-index: 15;
+                height: 56px;
+                cursor: pointer;
+                width: 56px;
+                background-color: $color-brand;
+                border-radius: 50%;
+                -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+            }
+
+            #sliderPrev{
+                outline: none;
+                border:1px solid $color-brand;
+                z-index: 15;
+                height: 56px;
+                cursor: pointer;
+                width: 56px;
+                background-color: $color-brand;
+                border-radius: 50%;
+                -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+
+            }
+
+            svg{
+                fill:$color-yellow;
+                width: 20px;
+                outline: none;
+            }
+        }
+    }
+}
