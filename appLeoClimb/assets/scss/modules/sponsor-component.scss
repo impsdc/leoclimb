@@ -1,27 +1,46 @@
 .sponsor-component{
     text-align: center;
+    position: relative;
 
     .sponsor-slider-wrapper{
         padding: 20px 0;
         overflow: hidden;
 
         .slider-component{
+            .slick-track {
+                left: -330px; /* half of the centered slide and padding */
+
+                @include max-screen(1600px){
+                    left:265px ;
+                }
+            }
 
             .item-slider{
                 display: block;
-                width: 500px;
+                width: 600px;
                 padding: 20px;
                 margin: 0 30px;
                 height: 350px;
                 background-color: #fff;
                 border: 1px solid $color-brand;
                 border-radius: 15px;
+
+                @include max-screen(1600px){
+                    width: 440px;
+                }
                 
-                img{
-                    display: block;
-                    margin: auto;
-                    margin-bottom: 20px;
-                    filter: grayscale(1);
+              .wrapper-logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60%;
+                margin: auto;
+                height: 150px;
+                    img{
+                        display: block;
+                        margin-bottom: 20px;
+                        filter: grayscale(1);
+                    }
                 }
                 p{
                     margin-top: auto;
@@ -31,7 +50,7 @@
             .slick-dots{
                 display: flex;
                 justify-content: center;
-                margin: 20px 0;
+                margin: 20px 20px;
         
                 li{
                    
@@ -58,11 +77,13 @@
         }
 
         .slider-btn-wrapper{
-            position: relative;
             margin: 0 auto;
             max-width: 1167px;
 
             #sliderNext{
+                position: absolute;
+                top: 36%;
+                right:2%;
                 outline: none;
                 border:1px solid $color-brand;
                 z-index: 15;
@@ -73,9 +94,13 @@
                 border-radius: 50%;
                 -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
                 box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                transition: 0.45s;
             }
 
             #sliderPrev{
+                position:absolute;
+                top: 36%;
+                left: 2%;
                 outline: none;
                 border:1px solid $color-brand;
                 z-index: 15;
@@ -86,7 +111,11 @@
                 border-radius: 50%;
                 -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
                 box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                transition: 0.45s;
+            }
 
+            button:hover{
+                opacity: 0.45;
             }
 
             svg{

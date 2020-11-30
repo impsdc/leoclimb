@@ -23,8 +23,6 @@
  * Date: 2020-05-04T22:49Z
  */
 
-/*! jQuery v3.5.1 | (c) JS Foundation and other contributors | jquery.org/license */
-
 /**
  * @license
  * Lodash <https://lodash.com/>

@@ -15,21 +15,22 @@ $(document).ready(function() {
         autoplay: false,
         arrows: true,
         dots: true,
+        centerMode: true,
         variableWidth: true,
         nextArrow: $('#sliderNext'),
         prevArrow: $('#sliderPrev'),
       
         responsive: [{
-                breakpoint: 992,
+                breakpoint: 1600,
                 settings: {
                     arrows: true,
                     autoplay: false,
                     dots: true,
                     nextArrow: $('#sliderNext'),
                     prevArrow: $('#sliderPrev'),
-                    slidesToShow: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     centerMode: true,
-                    variableWidth: false,
                 }
             },
             {
@@ -41,7 +42,8 @@ $(document).ready(function() {
                     nextArrow: $('#sliderNext'),
                     prevArrow: $('#sliderPrev'),
                     slidesToShow: 1,
-                    centerMode: false,
+                    slidesToScroll: 1,
+                    centerMode: true,
                     variableWidth: false,
                 }
             }
