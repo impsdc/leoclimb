@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 #Fonction qui redirige vers la page "Accueil"
 def home_redirect(request):
-	return redirect('/Accueil')
+	return redirect('/')
 
 # # HTTP Error 400
 # def bad_request(request, *args, **argv):

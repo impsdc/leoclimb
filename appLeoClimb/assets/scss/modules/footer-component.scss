@@ -3,12 +3,9 @@
     background-size: cover;
     height: auto;
     background-repeat: no-repeat;
+    background-position: center top;
     padding: 100px 0 50px;
     z-index: 0;
-
-    @include max-screen(1100px){
-        background-position: center;
-    }
 
     @include max-screen($mobile){
         padding:50px 0 20px;

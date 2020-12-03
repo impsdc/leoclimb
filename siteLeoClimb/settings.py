@@ -142,5 +142,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #    os.path.join(BASE_DIR, 'appLeoClimb/static')
 #    )
 
-LOGIN_REDIRECT_URL = '/Accueil'
-
+#LOGIN_REDIRECT_URL = '/'

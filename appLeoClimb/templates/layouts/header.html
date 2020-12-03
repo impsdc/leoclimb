@@ -2,7 +2,7 @@
 <header class="header-component">
   <div class="container">
     <div class="row align-items-center">
-        <div class="col-6 col-md-1 logo-component">
+        <div class="col-md-1 logo-component">
           <img src="{% static "images/logoBlanc.jpg" %}" alt="Logo Leoclimb" height="60" width="60" />
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
@@ -15,27 +15,32 @@
           <nav>
             <ul>
               <li>
-                <a href="/Notre-association">
+                <a href="{% url 'home' %}">
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="/Notre-association">
+                <a href="{% url 'galerie' %}">
                   Galerie
                 </a>
               </li>
               <li>
-                <a href="/Notre-association">
+                <a href="{% url 'dcc' %}">
                   Devinci Climbing Contest
                 </a>
               </li>
               <li>
-                <a href="/Notre-association">
+                <a href="{% url 'menbres' %}">
                   Membres
                 </a>
               </li>
               <li>
-                <a href="/Notre-association">
+                <a href="{% url 'palmares' %}">
+                  Palmarès
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'actualites' %}">
                   Actualité
                 </a>
               </li>

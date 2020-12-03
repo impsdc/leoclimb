@@ -1,0 +1,91 @@
+.dcc-component{
+    padding-top:100px;
+    background-color: $color-brand;
+    background-size: cover;
+    background-position: center bottom;
+    height: 700px;
+
+    .row{
+        align-items: center;
+
+        @include max-screen(1000px){
+            flex-direction: column-reverse;
+        }
+    }
+    .banner-title{
+        color:#fff;
+        padding: 80px 0;
+
+        @include max-screen(1000px){
+            padding: 20px; 
+        }
+        .wrapper-title{
+            display: flex;
+            flex-direction: column-reverse;
+
+            h2{
+                font-size: 3.5rem;
+                font-weight: 700;
+                padding-bottom: 15px;
+
+                @include max-screen($mobile){
+                    font-size: 1.9rem;
+                }
+            }
+
+            h1{
+                font-size: 2.1rem;
+                font-weight: 500;
+
+                @include max-screen($mobile){
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .wrapper-btn{
+            display: flex;
+        }
+        .main-btn-component{
+            margin-top: 40px;
+            margin-right: 40px;
+            width: 180px;
+        }
+    }
+    .banner-image{
+     display: block;
+     text-align: center;   
+
+     
+     @include max-screen(1000px){
+        width: 40%;
+    }
+    }
+}
+
+.description-dcc-component{
+    padding: 30px 0;
+    .row{
+        align-items: center;
+        margin: auto;
+        
+        img{
+            width: 50%;
+        }
+
+        p{
+            width: 50%;
+            margin: 0 20px;
+            text-align: center;
+        }
+        
+    }
+}
+
+.last-video-cdd-component{
+    text-align: center;
+    
+
+    iframe{
+        padding: 30px 0;
+    }
+}

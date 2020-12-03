@@ -3,9 +3,30 @@ from django.template import RequestContext
 # Create your views here.
 
 
-#Fonction qui dirige vers la page "Accueil" du site.
+#Home
 def home(request):
 	return render(request, 'home.html')
+
+#dcc
+def dcc(request):
+	return render(request, 'dcc.html')
+
+#galerie
+def galerie(request):
+	return render(request, 'galerie.html')
+
+#menbres
+def menbre(request):
+	return render(request, 'menbres.html')
+
+#palmares
+def palmares(request):
+	return render(request, 'palmares.html')
+
+#actualite
+def actu(request):
+	return render(request, 'actualite.html')
+
 
 #Fonction qui dirige vers la page "L'association" du site.
 def association(request):
@@ -24,8 +45,8 @@ def page_news(request):
 	return render(request, 'news.html')
 
 #Fonction qui dirige vers la page "Partenaires" du site.
-def page_partenaire(request):
-	return render(request, 'partenaires.html')
+def page_dcc(request):
+	return render(request, 'dcc.html')
 
 #Fonction qui dirige vers la page "Evenements" du site.
 def page_evenements(request):

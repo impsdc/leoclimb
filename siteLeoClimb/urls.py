@@ -37,7 +37,6 @@ handler400, handler403, handler404, handler500
 )
 
 urlpatterns = [
-    url(r'^$', views.home_redirect,name='home_redirect'),
     url('admin/', admin.site.urls),
     url('', include('appLeoClimb.urls')),
 ]

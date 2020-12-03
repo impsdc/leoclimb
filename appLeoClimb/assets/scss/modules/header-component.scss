@@ -19,7 +19,11 @@
     transition: 0.45s;
 
     .logo-component{
-      width: 55px;
+
+      @include max-screen($small){
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
     }
 
     .row{
@@ -40,7 +44,7 @@
         -webkit-transition: max-height 0.3s cubic-bezier(0.5, 0.6, 0.51, 0.92);
         transition: max-height 0.3s cubic-bezier(0.5, 0.6, 0.51, 0.92);
 
-      @include min-screen($mobile){
+      @include min-screen($small){
       position: static;
       margin-top: 0;
       height: auto;
@@ -67,7 +71,7 @@
         align-items: center;
         padding: 0;
 
-          @include max-screen($mobile){
+          @include max-screen($small){
             display: block;
             text-align: center;
             width: 100%;
@@ -76,7 +80,7 @@
         li{
           margin: 15px;
 
-          @include max-screen($mobile){
+          @include max-screen($small){
             margin: 40px 0;
            }
 
@@ -87,7 +91,7 @@
             padding: 0 15px;
             color: $white;
 
-            @include max-screen($mobile){
+            @include max-screen($small){
               font-size: 1.4375rem;
               font-weight: 700;
               letter-spacing: 0.3px;
@@ -102,14 +106,14 @@
       }
       .btn{
         margin-bottom: 40px;
-        @include min-screen($mobile){
+        @include min-screen($small){
           display: none;
       
         }
       }
         #reseaux{
           display: none;
-          @include max-screen($mobile){
+          @include max-screen($small){
             display: flex;
             justify-content: center;
           }
@@ -132,7 +136,7 @@
         justify-content: center;
         outline: none;
   
-        @include min-screen($mobile) {
+        @include min-screen($small) {
           display: none;
         }
   

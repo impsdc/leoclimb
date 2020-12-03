@@ -9,9 +9,17 @@
         .slider-component{
             .slick-track {
                 left: -330px; /* half of the centered slide and padding */
-
+                margin: auto;
                 @include max-screen(1600px){
-                    left:265px ;
+                    left:-260px ;
+                }
+
+                @include max-screen(1200px){
+                    left:232px;
+                }
+
+                @include max-screen($small){
+                    left:0;
                 }
             }
 
@@ -21,12 +29,37 @@
                 padding: 20px;
                 margin: 0 30px;
                 height: 350px;
+                opacity: .4s;
                 background-color: #fff;
                 border: 1px solid $color-brand;
                 border-radius: 15px;
+                transition: .45s;
 
                 @include max-screen(1600px){
-                    width: 440px;
+                    width: 460px;
+                }
+
+                @include max-screen(1200px){
+                    width: 405px;
+                }
+
+                @include max-screen($small){
+                    opacity: 0;
+                    height: 400px;
+                    margin: 0;
+
+                    &.slick-current{
+                        opacity: 1;
+                    }
+                }
+
+                @include max-screen(500px){
+                    width: 270px;
+                    height: 500px;
+                }
+
+                @include max-screen($phone){
+                    border: none;
                 }
                 
               .wrapper-logo{
@@ -44,6 +77,10 @@
                 }
                 p{
                     margin-top: auto;
+
+                    @include max-screen($phone){
+                        font-size: 12px;
+                    }
                 }
             }
         
@@ -82,11 +119,11 @@
 
             #sliderNext{
                 position: absolute;
-                top: 36%;
+                top: 45%;
                 right:2%;
                 outline: none;
                 border:1px solid $color-brand;
-                z-index: 15;
+                z-index: 0;
                 height: 56px;
                 cursor: pointer;
                 width: 56px;
@@ -95,15 +132,23 @@
                 -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
                 box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
                 transition: 0.45s;
+
+                @include max-screen(1200px){
+                    right: 0%;
+                }
+
+                @include max-screen($phone){
+                    top: 20%;
+                }
             }
 
             #sliderPrev{
                 position:absolute;
-                top: 36%;
+                top: 45%;
                 left: 2%;
                 outline: none;
                 border:1px solid $color-brand;
-                z-index: 15;
+                z-index: 0;
                 height: 56px;
                 cursor: pointer;
                 width: 56px;
@@ -112,10 +157,22 @@
                 -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
                 box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
                 transition: 0.45s;
+
+                @include max-screen(1200px){
+                    left: 0%;
+                }
+
+                @include max-screen($phone){
+                    top: 20%;
+                }
             }
 
             button:hover{
                 opacity: 0.45;
+
+                @include max-screen(1200px){
+                    opacity: 1;
+                }
             }
 
             svg{

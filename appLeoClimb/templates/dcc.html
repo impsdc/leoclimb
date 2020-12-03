@@ -1,0 +1,48 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block content %}
+<section class="dcc-component">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 banner-title">
+         <div class="wrapper-title">
+            <h1>Le DeVinci Climbing Contest est une compétition d’escalade
+                étudiante inter-école organisée entre plusieurs écoles
+                ingénieurs d’Ile-de-France</h1>
+            <h2><strong>Devinci Climbing Contest</strong></h2>
+         </div>
+          <div class="wrapper-btn">
+            <a class="main-btn-component">Voir les photos </a>
+            <a class="main-btn-component">Inscription</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 banner-image">
+          <img src="{% static "/images/logoContest.jpg" %}" lt="Devinci climbing contest comptetition d'escalade" titre="devinci_climbing_contest_logo"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="description-dcc-component">
+    <div class="container">
+        <div class="row">
+            <img src="{% static '/images/drapeauLogo.jpg' %}" alt="Leoclimb association d'escalade" titre="devinci-climbing-contest" />
+            <p>
+                Cette compétition est ouverte à tous les niveaux,
+                débutant en escalade comme confirmé. Notre objectif
+                n’est pas d’en faire une compétition d’excellence mais
+                un événement convivial entre étudiants autour d’un
+                même sport, l’escalade de bloc. C’est pour nous, notre
+                événement central car il représente à la fois un projet
+                innovant, unique en Ile-de-france pour les écoles
+                d’ingénieurs et motivant au vue de l'enthousiasme des
+                participants (entre cent et cent-cinquante) et de leurs
+                retours.
+            </p>
+        </div>
+    </div>
+  </section>
+  <section class="last-video-cdd-component">
+    <h3 class="title">Notre dernier contest</h3>
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/Bd4ShMyxA00" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+{% endblock %}
