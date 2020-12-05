@@ -1,9 +1,13 @@
 .dcc-component{
-    padding-top:100px;
-    background-color: $color-brand;
-    background-size: cover;
-    background-position: center bottom;
-    height: 700px;
+padding-top:100px;
+background-color: $color-brand;
+background-size: cover;
+background-position: center bottom;
+height: 600px;
+
+    @include max-screen(1000px){
+        height: auto;
+    }
 
     .row{
         align-items: center;
@@ -44,6 +48,7 @@
         }
         .wrapper-btn{
             display: flex;
+            flex-wrap:wrap;
         }
         .main-btn-component{
             margin-top: 40px;
@@ -52,40 +57,67 @@
         }
     }
     .banner-image{
-     display: block;
-     text-align: center;   
+        display: block;
+        text-align: center;   
 
-     
-     @include max-screen(1000px){
-        width: 40%;
-    }
-    }
-}
+        @include max-screen(1000px){
+            width:40%;
+        }
 
-.description-dcc-component{
-    padding: 30px 0;
+        @include max-screen($phone){
+            width:70%;
+            margin-top: 20px;
+        }
+        }
+    }
+
+    .description-dcc-component{
+    padding: 60px 0;
     .row{
         align-items: center;
         margin: auto;
-        
-        img{
-            width: 50%;
+
+        @include max-screen($small){
+            flex-direction: column;
+
+            div{
+                max-width: 100%;
+            }
         }
 
         p{
-            width: 50%;
             margin: 0 20px;
             text-align: center;
         }
         
     }
-}
+    }
 
-.last-video-cdd-component{
+    .last-video-dcc-component{
     text-align: center;
-    
+    margin: 60px 0 ;
 
-    iframe{
-        padding: 30px 0;
+    .container{
+        text-align: center;
+    }
+
+    div{
+        iframe{
+            margin: 30px 0;
+            border: none;
+            width: 700px;
+            height: 500px;
+            border-radius: 10px;
+
+            @include max-screen($mobile){
+                width: 350px;
+                height: 200px;
+            }
+
+            @include max-screen($phone){
+                width: 300px;
+                height: 150px;
+            }
+        }
     }
 }

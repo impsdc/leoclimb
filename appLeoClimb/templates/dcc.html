@@ -12,7 +12,7 @@
             <h2><strong>Devinci Climbing Contest</strong></h2>
          </div>
           <div class="wrapper-btn">
-            <a class="main-btn-component">Voir les photos </a>
+            <a class="main-btn-component">Voir les photos</a>
             <a class="main-btn-component">Inscription</a>
           </div>
         </div>
@@ -25,7 +25,10 @@
   <section class="description-dcc-component">
     <div class="container">
         <div class="row">
-            <img src="{% static '/images/drapeauLogo.jpg' %}" alt="Leoclimb association d'escalade" titre="devinci-climbing-contest" />
+            <div class="col-12 col-md-6">
+                <img src="{% static '/images/drapeauLogo.jpg' %}" alt="Leoclimb association d'escalade" titre="devinci-climbing-contest" />
+            </div>
+           <div class="col-6 col-md-6">
             <p>
                 Cette compétition est ouverte à tous les niveaux,
                 débutant en escalade comme confirmé. Notre objectif
@@ -38,11 +41,16 @@
                 participants (entre cent et cent-cinquante) et de leurs
                 retours.
             </p>
+           </div>
         </div>
     </div>
   </section>
-  <section class="last-video-cdd-component">
-    <h3 class="title">Notre dernier contest</h3>
-    <iframe width="400" height="225" src="https://www.youtube.com/embed/Bd4ShMyxA00" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <section class="last-video-dcc-component">
+    <div class="container"> 
+        <h3 class="title">Notre dernier contest</h3>
+        <div>
+            <iframe class="video" src="https://www.youtube.com/embed/Bd4ShMyxA00" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
   </section>
 {% endblock %}

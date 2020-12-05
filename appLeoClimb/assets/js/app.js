@@ -4,7 +4,6 @@ import "./libs/slick.min.js"
 
 import "./helpers.js";
 import './modules/menu';
-import './modules/carrousel';
 
 
 $(document).ready(function() {
@@ -36,6 +35,6 @@ $(document).ready(function() {
                 }
             }
         ]
-});
+    });
 
 });

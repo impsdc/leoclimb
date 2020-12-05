@@ -1,0 +1,251 @@
+.intro-compoenent{
+    padding-top: 100px;
+    height: 600px;
+    background-color: $color-brand;
+    
+    @include max-screen(1000px){
+        height: auto;
+    }
+
+    .title{
+        color: #fff;
+    }
+
+    .bureau-component{
+        text-align: center;
+        position: relative;
+        padding:0;
+
+        
+    
+        .bureau-slider-wrapper{
+            padding: 20px 0;
+            overflow: hidden;
+    
+            .slider-component{
+                .slick-track {
+                    left: -330px; /* half of the centered slide and padding */
+                    margin: auto;
+                    @include max-screen(1600px){
+                        left:-265px ;
+                    }
+    
+                    @include max-screen(1200px){
+                        left:232px;
+                    }
+    
+                    @include max-screen($small){
+                        left:0;
+                    }
+                }
+    
+                .item-slider{
+                    display: flex;
+                    align-items: center;
+                    width: 600px;
+                    padding: 20px;
+                    margin: 0 30px;
+                    height: 350px;
+                    border: 1px solid #fff;
+                    border-radius: 15px;
+                    transition: .45s;
+    
+                    @include max-screen(1600px){
+                        width: 470px;
+                    }
+    
+                    @include max-screen(1200px){
+                        width: 405px;
+                    }
+
+                    @include max-screen($small){
+                        flex-direction: column;
+                        opacity: 0;
+                        height: 500px;
+                        margin: 0;
+    
+                        &.slick-current{
+                            opacity: 1;
+                        }
+                    }
+    
+                    @include max-screen(500px){
+                        width: 270px;
+                        height: 500px;
+                    }
+    
+                    @include max-screen($phone){
+                        border: none;
+                    }
+                    
+                  .wrapper-img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 60%;
+                    margin: auto;
+                    height: 150px;
+                        img{
+                            display: block;
+                            border-radius: 10px;
+                        }
+                    }
+
+                   .wrapper-main{
+                       margin: 0 20px;
+                       width: 60%;
+
+                       @include max-screen($mobile){
+                            width: 100%;
+                        }
+
+                    h3{
+                        color: #fff;
+                        font-weight: 700;
+
+                        @include max-screen(1200px){
+                            font-size: 1.3rem;
+                        }
+                    }
+                    p{
+                        color: #fff;
+                    }
+
+                    .poste{
+                        font-size: 1.2rem;
+
+                        @include max-screen(1200px){
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .quote-component{
+                        .first-quote{
+                            text-align: start;
+                        }
+
+                        .last-quote{
+                            text-align: end;
+                        }
+                        
+                        p{
+                            font-style: italic;
+                            font-size:15px;
+                            margin: 0;
+
+                            @include max-screen(1200px){
+                                font-size: 12px;
+                            }
+                        }
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                   }
+                }
+            
+                .slick-dots{
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px 20px;
+            
+                    li{
+                       
+                        button{
+                            margin: 0 20px;
+                            width: 20px;
+                            height: 20px;
+                            background: transparent;
+                            border: 2px solid $color-yellow;
+                            border-radius: 50px;
+                            text-indent:99999999999999px;
+                            opacity: .5;
+                            outline: none;
+                        }
+            
+                        &.slick-active{
+                            button{
+                                background: $color-yellow;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .slider-btn-wrapper{
+                margin: 60px auto;
+                max-width: 1167px;
+    
+                #sliderNext{
+                    position: absolute;
+                    top: 45%;
+                    right:2%;
+                    outline: none;
+                    border:1px solid #fff;
+                    z-index: 0;
+                    height: 56px;
+                    cursor: pointer;
+                    width: 56px;
+                    background-color: $color-brand;
+                    border-radius: 50%;
+                    -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                    box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                    transition: 0.45s;
+    
+                    @include max-screen(1200px){
+                        right: 0%;
+                    }
+    
+                    @include max-screen($phone){
+                        top: 43%;
+                    }
+                }
+    
+                #sliderPrev{
+                    position:absolute;
+                    top: 45%;
+                    left: 2%;
+                    outline: none;
+                    border:1px solid #fff;
+                    z-index: 0;
+                    height: 56px;
+                    cursor: pointer;
+                    width: 56px;
+                    background-color: $color-brand;
+                    border-radius: 50%;
+                    -webkit-box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                    box-shadow: 0px 0px 9px 3px rgba($color-brand, 0.26);
+                    transition: 0.45s;
+    
+                    @include max-screen(1200px){
+                        left: 0%;
+                    }
+    
+                    @include max-screen($phone){
+                        top: 43%;
+                    }
+                }
+    
+                button:hover{
+                    opacity: 0.45;
+    
+                    @include max-screen(1200px){
+                        opacity: 1;
+                    }
+                }
+    
+                svg{
+                    fill:$color-yellow;
+                    width: 20px;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
