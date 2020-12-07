@@ -6,6 +6,22 @@
     text-align: center;
     padding-bottom: 20px;
 
+    &.white{
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 8px;
+            content: "";
+            background-image: url("/static/ic/shoe_white.svg");
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            margin-left: -50px;
+        }
+    }
+
+    
     @include max-screen($mobile){
         font-size: 1.5rem;
     }

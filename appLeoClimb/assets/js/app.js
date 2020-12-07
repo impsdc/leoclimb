@@ -4,6 +4,7 @@ import "./libs/slick.min.js"
 
 import "./helpers.js";
 import './modules/menu';
+import './modules/modal-blog';
 
 
 $(document).ready(function() {
