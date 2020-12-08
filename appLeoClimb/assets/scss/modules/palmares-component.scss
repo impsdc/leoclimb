@@ -1,0 +1,47 @@
+.palmares-component{
+    padding: 20px 0;
+
+    .wrapper-palmares{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .main-content{
+            width: 40%;
+
+            .title-palmares{
+                font-size: 2rem;
+                position: relative;
+                display: inline-block;
+                min-width: 135px;
+                text-align: center;
+                padding-bottom: 20px;
+
+
+                &:before{
+                    position: absolute;
+                    left: 0;
+                    top: 8px;
+                    content: "";
+                    background-image: url("/static/ic/shoe.svg");
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    margin-left: -50px;
+                }
+            }
+        }
+
+        .main-image{
+            width: 60%;
+
+            img{
+                max-width: 70%;
+                display: block;
+                margin: auto;
+                border-radius: 10px;
+            }
+        }
+    }
+}

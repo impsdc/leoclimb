@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block content %}
+<section class="intro-basic-component">
+    <div class="container">
+        <h1 class="title">Les palmarès de Leoclimb</h1>
+    </div>
+</section> 
+
+<section class="palmares-component">
+    <div class="container">
+        <div class="wrapper-palmares col-md-12">
+           <div class="main-content" >
+                <h2 class="title-palmares">
+                    Devinci Climbing contest
+                </h2>
+                <div class="main-text-palmares">
+                    <p>
+                        <a href="#" class="name">
+                            Remy Bonche
+                        </a>
+                    </p>
+                    <p class="winning">    
+                        1er place avec 500points 
+                    </p>
+                </div>
+           </div>
+           <div class="main-image">
+                <img src="{% static '/images/events/2019Remise/remise2019Pull1.jpg' %}" alt="featured-image dcc" />
+           </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
