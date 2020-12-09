@@ -1,7 +1,8 @@
-.intro-compoenent{
+.intro-component{
     padding-top: 100px;
     height: 600px;
     background-color: $color-brand;
+    text-align: center;
     
     @include max-screen(1000px){
         height: auto;
@@ -16,7 +17,6 @@
         position: relative;
         padding:0;
 
-        
     
         .bureau-slider-wrapper{
             padding: 20px 0;
@@ -253,4 +253,8 @@
 .promo-component{
     margin: 60px auto;
     text-align: center;
+
+    .title{
+        margin-bottom: 30px;
+    }
 }

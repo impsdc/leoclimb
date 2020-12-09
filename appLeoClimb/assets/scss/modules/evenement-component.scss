@@ -1,0 +1,33 @@
+.evenement-component{
+    background-color: $color-brand;
+    padding-top: 120px;
+    text-align: center;
+    height: auto;
+
+    .title{
+        margin-bottom: 30px;
+        color: #fff;
+    }
+    
+    .evenement-wrapper-component{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+
+        padding: 0 15px;
+        .grid-item{
+            width: 30%;
+            margin: 0 5px;
+            img{
+                width: 100%;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+    
+            p{
+                color: #fff;
+            }
+        }
+    }
+}

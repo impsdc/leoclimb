@@ -1,12 +1,14 @@
 import $ from "jquery"
 import "./libs/slick.min.js"
+import Masonry from "masonry-layout"
 
 
 import "./helpers.js";
 import './modules/menu';
 import './modules/modal-blog';
+import './modules/galerie';
 
-
+/* slider component */
 $(document).ready(function() {
     $('.slider-component').slick({
         slidesToShow: 2,
@@ -38,4 +40,9 @@ $(document).ready(function() {
         ]
     });
 
+});
+
+var grid = document.querySelector('.evenement-wrapper-component');
+var msnry = new Masonry( grid, {
+  itemSelector: '.grid-item',
 });

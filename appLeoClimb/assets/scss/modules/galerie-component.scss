@@ -1,0 +1,25 @@
+.galerie-component{
+    background-color: $color-brand;
+    padding-top: 120px;
+    text-align: center;
+    height: auto;
+
+    .title{
+        margin-bottom: 30px;
+        color: #fff;
+    }
+    
+
+    .photo-item{
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            color: #fff;
+        }
+    }
+}
