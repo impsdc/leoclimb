@@ -43,6 +43,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'appLeoClimb',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,13 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-#    'crispy_forms',
-#    'material',
-#    'appLeoClimb',
-#    'flat_responsive'
-#    'flat'
-#    'colorfield'
-#    'django.contrib.admin'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -100,14 +95,23 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'leoclimb',
         'USER': 'paul',
-        'PASSWORD': 'santamaria',
-        'HOST': 'db',
-        'PORT': 5432,
+        'PASSWORD': 'paultapedes7a',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+# deploy with docker
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'leoclimb',
+#        'USER': 'paul',
+#        'PASSWORD': 'santamaria',
+#        'HOST': 'db',
+#        'PORT': 5432,
+#    }
+#}
 
-#'ENGINE': 'django.db.backends.sqlite3',
-#'NAME': 'mydatabase',
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
