@@ -28,7 +28,7 @@ Including another URLconf
 # #    path('', views.home()), #url relié à notre fonction home
 #     path('admin/', admin.site.urls),
 # ]
-
+from django.conf import settings
 from django.contrib import admin
 from django.conf.urls import url, include
 from siteLeoClimb import views 
@@ -45,3 +45,9 @@ urlpatterns = [
 # handler403 = 'appLeoClimb.views.permission_denied'
 # handler404 = 'appLeoClimb.views.page_not_found'
 handler500 = 'siteLeoClimb.views.server_error'
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls))
+    ] + urlpatterns
