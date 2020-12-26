@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.template import RequestContext
-# Create your views here.
+
+from .models import Post
 
 
 #Home
@@ -25,7 +26,9 @@ def palmares(request):
 
 #actualite
 def actu(request):
-	return render(request, 'actualite.html')
+	obj = Post.objects.all().order_by('date')
+	
+	return render(request, 'actualite.html', {'obj': obj})
 
 
 #Fonction qui dirige vers la page "L'association" du site.

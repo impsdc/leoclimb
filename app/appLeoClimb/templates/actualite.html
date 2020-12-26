@@ -7,24 +7,26 @@
         <h1 class="title">Le blog de leoclimb</h1>
     </div>
 </section> 
+{{ test }}
 <section class="actualite-component">
+    {% for post in obj %}
     <div class="single-article">
         <div class="wrapper container">
             <div class="wrapper-item-blog">
                 <div class="contain-image"> 
-                    <img src="{% static 'images/events/murmurISSY2020/murmurIssy1.jpg'%}" alt="murmur issy les moulineaux esalade"  id="open"/>
+                    <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{post.image}}"  id="open"/>
                     <span class="more">
                         Cliquer sur l'image pour mieux voir
                     </span>
                 </div>
                 <div class="contain-description">
-                    <h2 class="blog-title">Grimpe en voie : Leoclimb renforce sa cohésion de groupe</h2>
+                    <h2 class="blog-title">{{post.title}}</h2>
                     <div class="wrapper-title-blog">
                         <img src="{% static '/ic/date.svg'%}" alt="leoclimnb-date-blog" />
                         <span>Publié le </span>
-                        <p>27 septembre 2020</p>
+                        <p>{{post.date}}</p>
                     </div>
-                    <p>Lors de cette sortie, ce sont tous les élèves de l’ESILV, l’IIM et de l’EMLV membres de Leoclimb qui se sont réunis à la salle d’escalade MurMur à Issy-les-Moulineaux pour une session de grimpe. La cohésion des membres est au cœur de cet événement : l’objectif est de rencontrer les nouveaux membres et de souder les liens. Pour changer de la grimpe habituelle en bloc, nous avons choisi de grimper dans une salle d’escalade de voie. Pour conclure cet événement intra-association, nous avons partagé tous ensemble une pizza.</p>
+                    <p>{{ post.main}}</p>
                 </div>        
             </div>
             <span class="separateur"></span>
@@ -34,41 +36,11 @@
                     <span id="close">&times;</span>
                 </div>
                 <img alt='murmur issy les moulineaux esalade' id="modal-content"/>
-                <p class="caption">ISSY les moulineaux 2020</p>
+                <p class="caption">{{post.title}}</p>
             </div>
           </div>
         </div>
     </div>
-    <div class="single-article">
-        <div class="wrapper container">
-            <div class="wrapper-item-blog">
-                <div class="contain-image"> 
-                    <img src="{% static 'images/events/murmurISSY2020/murmurIssy1.jpg'%}" alt="murmur issy les moulineaux esalade"  id="open"/>
-                    <span class="more">
-                        Cliquer sur l'image pour mieux voir
-                    </span>
-                </div>
-                <div class="contain-description">
-                    <h2 class="blog-title">Grimpe en voie : Leoclimb renforce sa cohésion de groupe</h2>
-                    <div class="wrapper-title-blog">
-                        <img src="{% static '/ic/date.svg'%}" alt="leoclimnb-date-blog" />
-                        <span>Publié le </span>
-                        <p>27 septembre 2020</p>
-                    </div>
-                    <p>Lors de cette sortie, ce sont tous les élèves de l’ESILV, l’IIM et de l’EMLV membres de Leoclimb qui se sont réunis à la salle d’escalade MurMur à Issy-les-Moulineaux pour une session de grimpe. La cohésion des membres est au cœur de cet événement : l’objectif est de rencontrer les nouveaux membres et de souder les liens. Pour changer de la grimpe habituelle en bloc, nous avons choisi de grimper dans une salle d’escalade de voie. Pour conclure cet événement intra-association, nous avons partagé tous ensemble une pizza.</p>
-                </div>        
-            </div>
-            <span class="separateur"></span>
-          <div class="modal-wrapper">
-            <div class="modal-image">
-                <div class="close">
-                    <span id="close">&times;</span>
-                </div>
-                <img alt='murmur issy les moulineaux esalade' id="modal-content"/>
-                <p class="caption">ISSY les moulineaux 2020</p>
-            </div>
-          </div>
-        </div>
-    </div>
+    {% endfor %}
 </section>
 {% endblock %}

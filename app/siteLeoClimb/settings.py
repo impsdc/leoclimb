@@ -82,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media'
             ],
         },
     },
@@ -99,8 +100,8 @@ DATABASES = {
         'NAME': 'leoclimb',
         'USER': 'paul',
         'PASSWORD': 'paultapedes7a',
-        'HOST': 'db',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '5000',
     }
 }
 # deploy with docker
@@ -109,7 +110,7 @@ DATABASES = {
 #        'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': 'leoclimb',
 #        'USER': 'paul',
-#        'PASSWORD': 'santamaria',
+#        'PASSWORD': 'paultapedes7a',
 #        'HOST': 'db',
 #        'PORT': 5432,
 #    }

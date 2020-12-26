@@ -1,12 +1,14 @@
-// Get the modal
-var modal = document.querySelector(".modal-wrapper");
+var items = document.querySelectorAll(".single-article");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("open");
-var modalImg = document.getElementById("modal-content");
-var captionText = document.getElementById("caption");
+items.forEach(element => {
+  
+  let img = element.querySelector("#open");
+  let modalImg = element.querySelector("#modal-content");
+  let captionText = element.querySelector("#caption");
+  let modal = element.querySelector(".modal-wrapper");
 
-if(modal){
+  if(element){
+  
     img.onclick = function(){
         modal.style.opacity = 1;
         modal.style.zIndex = 1;
@@ -15,11 +17,17 @@ if(modal){
       }
       
       // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
+      let span = element.getElementsByClassName("close")[0];
       
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
         modal.style.opacity = 0;
         modal.style.zIndex = -1;
       }
-}
+
+      element.querySelector('.modal-wrapper').onclick = function() {
+        modal.style.opacity = 0;
+        modal.style.zIndex = -1;
+      }
+  }
+});
