@@ -60,6 +60,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 0px 50px;
 
             @include max-screen($mobile){
                 flex-direction: column-reverse;

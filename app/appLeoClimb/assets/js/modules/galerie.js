@@ -6,7 +6,6 @@ if(document.querySelector('.galerie-component')){
 
 if(document.querySelector('.evenement-component')){
     if(document.querySelectorAll('.photo-item').length === 3){
-        console.log("lol")
         document.querySelector('.footer-component').style.padding = "100px 50px"
     }
 }

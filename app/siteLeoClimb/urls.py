@@ -35,6 +35,7 @@ from siteLeoClimb import views
 from django.conf.urls import (
 handler400, handler403, handler404, handler500
 )
+from django.conf.urls.static import static
 
 urlpatterns = [
     url('admin/', admin.site.urls),
@@ -50,4 +51,4 @@ if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
         url(r'^__debug__/', include(debug_toolbar.urls))
-    ] + urlpatterns
+    ] + urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
