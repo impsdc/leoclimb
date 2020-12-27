@@ -2,11 +2,17 @@ from django.shortcuts import render
 from django.template import RequestContext
 
 from .models import Post
+from .models import Bureau
+from .models import Palmare
+from .models import Membre
+from .models import Partenaire
 
 
 #Home
 def home(request):
-	return render(request, 'home.html')
+	obj = Partenaire.objects.all()
+
+	return render(request, 'home.html', {'obj':obj})
 
 #dcc
 def dcc(request):
@@ -18,17 +24,33 @@ def galerie(request):
 
 #menbres
 def menbre(request):
-	return render(request, 'menbres.html')
+	obj = Bureau.objects.all()
+
+	return render(request, 'menbres.html', {'obj':obj})
 
 #palmares
 def palmares(request):
-	return render(request, 'palmares.html')
+	palmares = Palmare.objects.all()
+
+	return render(request, 'palmares.html', {'obj': palmares})
 
 #actualite
 def actu(request):
-	obj = Post.objects.all().order_by('date')
+	obj = Post.objects.all().order_by('date').reverse()
 	
 	return render(request, 'actualite.html', {'obj': obj})
+
+#merchandising
+def inscription(request):
+	return render(request, 'inscription.html')
+
+#mentions
+def mentions(request):
+	return render(request, 'mentions.html')
+
+#merchandising
+def merchandising(request):
+	return render(request, 'merchandising.html')
 
 
 #Fonction qui dirige vers la page "L'association" du site.

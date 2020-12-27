@@ -23,7 +23,16 @@ urlpatterns = [
     path('Palmares', views.palmares, name='palmares'), 
 
     #actualite
-    path('Actualites', views.actu, name='actualites'), 
+    path('Actualites', views.actu, name='actualites'),
+
+    #mentions-legales
+    path('Mentions-legales', views.mentions, name='mentions'), 
+    
+    #merchandising
+    path('merchandising', views.merchandising, name='merchandising'), 
+
+     #merchandising
+    path('inscription-devinci-climbing-conntest', views.inscription, name='inscription'), 
 
     url(r'^Notre-association/$', views.association), #url relié à notre fonction "home"
     url(r'^Le-bureau/$', views.page_le_bureau), #url relié à notre fonction "page_le_bureau"

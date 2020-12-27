@@ -81,6 +81,14 @@
                 }
 
                 p{
+                    a{
+                        color: #fff;
+
+                        &:hover{
+                            opacity: 0.3s;
+                        }
+                    }
+                    
                     margin: 0;
                     padding-right: 10px;
                 }

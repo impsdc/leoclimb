@@ -43,6 +43,8 @@ $(document).ready(function() {
 });
 
 var grid = document.querySelector('.evenement-wrapper-component');
-var msnry = new Masonry( grid, {
-  itemSelector: '.grid-item',
-});
+if(grid){
+    var msnry = new Masonry( grid, {
+        itemSelector: '.grid-item',
+      });
+}
