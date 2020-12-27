@@ -1,4 +1,5 @@
 {% extends "layouts/base.html" %}
+{% load poll_extras %}
 {% load static %}
 {% block content %}
 <section class="intro-basic-component">
@@ -6,91 +7,33 @@
         <h1 class="title">Les palmarès de Leoclimb</h1>
     </div>
 </section> 
-
 <section class="palmares-component">
     <div class="container">
-        <div class="wrapper-palmares col-md-12">
+        {% for palmares in obj %}
+        <div class="wrapper-palmares {% if forloop.counter0|divisibleby:2 %} {% else %} inverse {% endif %}col-md-12">
            <div class="main-content" >
                 <h2 class="title-palmares">
-                    Devinci Climbing contest
+                    {{ palmares.titre}}  
                 </h2>
-                <p class="date">Effectué en avril 2019</p>
+                <p class="date">Effectué en {{ palmares.date|date:"F Y"}}</p>
+                <p>
+                </p>
+                {% for membre in palmares.membre_set.all|orderbyplace %}
                 <div class="single-menber-palmares">
-                    <p>
-                        <a href="#" class="name">
-                            Paul Santamaria :
-                        </a>
+                    <p class="name">
+                        {{ membre.nom }} :
                     </p>
                     <p class="winning">    
-                        1er place avec 500 points 
+                        {{ membre.place }} 
                     </p>
                 </div>
-                <div class="single-menber-palmares">
-                    <p>
-                        <a href="#" class="name">
-                            Paul Santamaria :
-                        </a>
-                    </p>
-                    <p class="winning">    
-                        1er place avec 500 points 
-                    </p>
-                </div>
-                <div class="single-menber-palmares">
-                    <p>
-                        <a href="#" class="name">
-                            Paul Santamaria :
-                        </a>
-                    </p>
-                    <p class="winning">    
-                        1er place avec 500 points 
-                    </p>
-                </div>
+                {% endfor %}
            </div>
            <div class="main-image">
-                <img src="{% static '/images/events/2019Remise/remise2019Pull1.jpg' %}" alt="featured-image dcc" />
+                <img src="{{ MEDIA_URL }}{{ palmares.image }}" alt="{{ palmares.titre}}" />
            </div>
         </div>
-        <div class="wrapper-palmares inverse col-md-12">
-            <div class="main-content" >
-                 <h2 class="title-palmares">
-                     Block Buster Contest
-                 </h2>
-                 <p class="date">Effectué en decembre 2018</p>
-                 <div class="single-menber-palmares">
-                     <p>
-                         <a href="#" class="name">
-                             Paul Santamaria :
-                         </a>
-                     </p>
-                     <p class="winning">    
-                         1er place avec 500 points 
-                     </p>
-                 </div>
-                 <div class="single-menber-palmares">
-                     <p>
-                         <a href="#" class="name">
-                             Paul Santamaria :
-                         </a>
-                     </p>
-                     <p class="winning">    
-                         1er place avec 500 points 
-                     </p>
-                 </div>
-                 <div class="single-menber-palmares">
-                     <p>
-                         <a href="#" class="name">
-                             Paul Santamaria :
-                         </a>
-                     </p>
-                     <p class="winning">    
-                         1er place avec 500 points 
-                     </p>
-                 </div>
-            </div>
-            <div class="main-image">
-                 <img src="{% static '/images/events/2019Remise/remise2019Pull1.jpg' %}" alt="featured-image dcc" />
-            </div>
-         </div>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}

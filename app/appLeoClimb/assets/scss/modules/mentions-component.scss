@@ -1,0 +1,23 @@
+.mentions-component{
+    margin: 20px 0;
+    .first{
+        margin: 0;
+    }
+    ul{
+        padding: 20px 0;
+
+        li{
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    a{
+        color: $color-yellow;
+
+        &:hover{
+            opacity: 0.3;
+        }
+    }
+}
