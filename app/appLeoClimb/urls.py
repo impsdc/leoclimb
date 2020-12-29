@@ -31,8 +31,10 @@ urlpatterns = [
     #merchandising
     path('merchandising', views.merchandising, name='merchandising'), 
 
-     #merchandising
-    path('inscription-devinci-climbing-conntest', views.inscription, name='inscription'), 
+    #dcc Inscription
+    path('Devinci-Climbing-Conntest/inscription', views.inscription, name='inscription'), 
+    #handle form
+    path('Devinci-Climbing-Conntest/inscription/submit', views.createInscription, name='createInscription'), 
 
     url(r'^Notre-association/$', views.association), #url relié à notre fonction "home"
     url(r'^Le-bureau/$', views.page_le_bureau), #url relié à notre fonction "page_le_bureau"

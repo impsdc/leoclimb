@@ -80,18 +80,20 @@
                     }
                 }
 
-                p{
-                    a{
-                        color: #fff;
-
-                        &:hover{
-                            opacity: 0.3s;
-                        }
-                    }
-                    
+                p{  
                     margin: 0;
                     padding-right: 10px;
+                    
+                    
+                    a{
+                        color: #ffffff;
+
+                        &:hover{
+                            opacity: 0.3;
+                        }
+                   }
                 }
+
            
             }
 

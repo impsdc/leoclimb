@@ -1,3 +1,131 @@
+.inscription-page{
+    display: flex;
+    flex-direction: column  ;
+}
 .inscription-component{
-    
+        .intro{
+            text-align: center;
+        }
+
+
+        .contain-form{
+            margin: 20px 0;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+                position: relative;
+                margin: 25px 20px;
+
+                @include max-screen($mobile){
+                    width: 275px;
+                 }
+
+                label{
+                    font-size: 20px;
+                    position: absolute;
+                    top: 11px;
+                    z-index: 10;
+                    margin: 0;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+
+                input, select {
+                    min-width: unset;
+                    z-index: 1;
+                    background-color: #fff;
+                    border: none;
+                    border-bottom:2px solid $color-brand;
+                    outline: none;
+                    position: relative;
+                    font-size: 20px;
+                    margin: 10px 10px 10px 0;
+                    color: $color-brand;
+                    transition: 0.6s;
+
+                    @include max-screen($mobile){
+                        margin: 10px 0px;
+                     }
+                    
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                    &:focus{
+                        border-color: $color-yellow;
+                    }
+
+                    option{
+                        border: $color-brand;
+                        color: $color-brand;
+                    }
+
+                }
+
+            }
+            .select{
+                label{
+                    top: -20px;
+                }
+            }
+
+            .question{
+                    margin: 15px 0;
+                    width: 70%;
+
+                    select,input{
+                        color: $color-brand;
+                        margin: 0;
+                        width: 100%;
+                    }
+            }
+
+            .submit{
+                input{
+                    width: 140px;
+                    text-align: center;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    line-height: 16px;
+                    display: inline-block;
+                    text-align: center;
+                    padding: 12px 24px;
+                    margin: 0 auto;
+                    border-radius: 7px;
+                    color: #fff;
+                    border: 1px solid $color-yellow;
+                    background-color: $color-yellow;
+                    letter-spacing: 0.3px;
+                    transition: $cubic;
+
+                    &:hover{
+                        color: $color-yellow;
+                        background-color: #fff;
+                      }
+                }
+            }
+
+            .has-focus{
+                label{
+                    top: -15px;
+                    color: $color-yellow;
+                }
+
+                .form-label-select{
+                    top: -20px!important;
+                    
+                }
+            } 
+
+            .is-not-empty{
+                top: -15px;
+                color: $color-yellow;
+            }
+        }   
 }

@@ -7,6 +7,7 @@ import "./helpers.js";
 import './modules/menu';
 import './modules/modal-blog';
 import './modules/galerie';
+import './modules/forms';
 
 /* slider component */
 $(document).ready(function() {
@@ -47,4 +48,9 @@ if(grid){
     var msnry = new Masonry( grid, {
         itemSelector: '.grid-item',
       });
+}
+
+//extra css for inscription page footer
+if(document.querySelector(".inscription-page")){
+    document.querySelector('.footer-component').style.marginTop = "auto"
 }

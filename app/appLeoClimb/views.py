@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import RequestContext
 
 from .models import Post
@@ -6,6 +6,7 @@ from .models import Bureau
 from .models import Palmare
 from .models import Membre
 from .models import Partenaire
+from .models import Inscription
 
 
 #Home
@@ -43,6 +44,28 @@ def actu(request):
 #merchandising
 def inscription(request):
 	return render(request, 'inscription.html')
+
+#create inscription
+def createInscription(request):
+	if request.method == "POST":
+		nom = request.POST['nom']
+		prenom = request.POST['prenom']
+		ecole = request.POST['ecole']
+		tshirt = request.POST['tshirt']
+		question = request.POST['question']
+
+		
+		Inscription.objects.create(
+			nom = nom,
+			prenom = prenom,
+			ecole  = ecole ,
+			tshirt = tshirt ,
+			question = question
+		)
+
+		return redirect("/")
+	else: 
+		return redirect("/Bureau")
 
 #mentions
 def mentions(request):
