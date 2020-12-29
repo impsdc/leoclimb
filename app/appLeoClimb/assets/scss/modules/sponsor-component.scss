@@ -10,7 +10,15 @@
             .slick-track {
                 left: -330px; /* half of the centered slide and padding */
                 margin: auto;
-                @include max-screen(1600px){
+
+                @include max-screen(1620px){
+                    left:-990px ;
+                }
+                @include max-screen(1601px){
+                    left:-990px ;
+                }
+
+                @include max-screen(1599px){
                     left:-260px ;
                 }
 
@@ -29,13 +37,13 @@
                 padding: 20px;
                 margin: 0 30px;
                 height: 350px;
-                opacity: .4s;
                 background-color: #fff;
                 border: 1px solid $color-brand;
                 border-radius: 15px;
+                outline: none;
                 transition: .45s;
 
-                @include max-screen(1600px){
+                @include max-screen(1599px){
                     width: 460px;
                 }
 
