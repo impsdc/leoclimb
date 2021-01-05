@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.template import RequestContext
+from django.contrib import messages
 
 from .models import Post
 from .models import Bureau
@@ -7,12 +8,14 @@ from .models import Palmare
 from .models import Membre
 from .models import Partenaire
 from .models import Inscription
+from .models import Galerie
+from .models import Merchandising
+from .models import DevinciClimbingContest
 
 
 #Home
 def home(request):
 	obj = Partenaire.objects.all()
-
 	return render(request, 'home.html', {'obj':obj})
 
 #dcc
@@ -21,7 +24,8 @@ def dcc(request):
 
 #galerie
 def galerie(request):
-	return render(request, 'galerie.html')
+	obj = Galerie.objects.all()
+	return render(request, 'galerie.html', {'obj':obj})
 
 #menbres
 def menbre(request):
@@ -38,12 +42,14 @@ def palmares(request):
 #actualite
 def actu(request):
 	obj = Post.objects.all().order_by('date').reverse()
-	
+
 	return render(request, 'actualite.html', {'obj': obj})
 
-#merchandising
-def inscription(request):
-	return render(request, 'inscription.html')
+#inscripiton
+def inscription(request):	
+	obj = DevinciClimbingContest.objects.all()
+
+	return render(request, 'inscription.html', {'obj': obj})
 
 #create inscription
 def createInscription(request):
@@ -54,26 +60,35 @@ def createInscription(request):
 		tshirt = request.POST['tshirt']
 		question = request.POST['question']
 
+		tshirt_list = ("S", "M", "XL")
+		question_list = ("Reseaux", "Asso de votre école", "Entourage", "Autres")
 		
-		Inscription.objects.create(
-			nom = nom,
-			prenom = prenom,
-			ecole  = ecole ,
-			tshirt = tshirt ,
-			question = question
-		)
-
-		return redirect("/")
+		if tshirt in tshirt_list and question in question_list:
+	
+			Inscription.objects.create(
+				nom = nom,
+				prenom = prenom,
+				ecole  = ecole ,
+				tshirt = tshirt ,
+				question = question
+			)
+			messages.error(request, 'Veuillier choisir une des valeurs proposées')
+			return render(request, 'inscription.html')
+		else:
+			messages.success(request, 'Le formulaire a bien été envoyé')
+			return render(request, 'inscription.html')
 	else: 
+		messages.success(request, 'Le formulaire a bien été envoyé')
 		return redirect("/Bureau")
 
 #mentions
 def mentions(request):
-	return render(request, 'mentions.html')
+	return render(request, 'mentions.html', {'obj': obj})
 
 #merchandising
 def merchandising(request):
-	return render(request, 'merchandising.html')
+	obj = Merchandising.objects.all().reverse()
+	return render(request, 'merchandising.html', {'obj': obj[::-1]})
 
 
 #Fonction qui dirige vers la page "L'association" du site.

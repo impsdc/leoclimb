@@ -12,7 +12,7 @@
               Léonard de Vinci</h1>
             <h2><strong>LeoClimb</strong><br>Pour te faire grimper au 7ème ciel</h2>
          </div>
-          <a class="main-btn-component" href="{% url 'inscription'%}">Devinci Climbing Contest</a>
+          <a class="main-btn-component" href="{% url 'inscription'%}">Inscription Devinci Climbing Contest</a>
         </div>
         <div class="col-12 col-lg-4 banner-image">
           <img src="{% static "/images/leoclimb-association-escalade-logo.png" %}" />
@@ -61,56 +61,18 @@
       <h3 class="title">Nos Partenaires</h3>
         <div class="sponsor-slider-wrapper">
           <div class="slider-component">
+
+            {% for partenaire in obj  %}
               <div class="item-slider">
               <div class="wrapper-logo">
-                  <img src="{% static "./images/partenaires/blocbuster.png" %}" />
+                  <img src="{{MEDIA_URL}}{{partenaire.logo}}" alt="logo partenaire" />
               </div>
                 <p>
-                  Blocbuster est la nouvelle alternative aux salles de
-                  sport classiques, beaucoup plus accessible que
-                  l’escalade sur cordes, avec l’escalade en bloc plus
-                  besoin de partenaires pour s’assurer, aucune
-                  technique « compliquée » à maîtriser. L’activité est
-                  ouverte à tous, conviviale et ludique, elle permet
-                  rencontres et échanges.
+                  {{partenaire.description}}
                 </p>
               </div>
-              <div class="item-slider">
-                <div class="wrapper-logo">
-                    <img src="{% static "./images/partenaires/avc.png" %}" />
-                </div>
-                <p>
-                  Blocbuster est la nouvelle alternative aux salles de
-                  sport classiques, beaucoup plus accessible que
-                  l’escalade sur cordes, avec l’escalade en bloc plus
-                  besoin de partenaires pour s’assurer, aucune
-                  technique « compliquée » à maîtriser. L’activité est
-                  ouverte à tous, conviviale et ludique, elle permet
-                  rencontres et échanges.
-                </p>
-              </div>
-              <div class="item-slider">
-                <div class="wrapper-logo">
-                    <img src="{% static "./images/partenaires/petzel.png" %}" />
-                </div>
-                  <p>
-                    Blocbuster est la nouvelle alternative aux salles de
-                    sport classiques, beaucoup plus accessible que
-                    l’escalade sur cordes, avec l’escalade en bloc plus
-                    besoin de partenaires pour s’assurer, aucune
-                    technique « compliquée » à maîtriser. L’activité est
-                    ouverte à tous, conviviale et ludique, elle permet
-                    rencontres et échanges.
-                  </p>
-              </div>
-              <div class="item-slider">
-                <div class="wrapper-logo">
-                    <img src="{% static "./images/partenaires/ldv.png" %}" />
-                </div>
-                <p>
-                  Le Pôle Léonard de Vinci, c’est trois écoles à Paris-La Défense : une école d’ingénieurs, une école de management, une école multimédia. En complément, un Institut propose de la formation continue.
-                </p>
-              </div>
+            {% endfor %}
+
           </div>
           <div class="slider-btn-component">
             <div class="slider-btn-wrapper">

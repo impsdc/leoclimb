@@ -1,4 +1,5 @@
 {% extends "layouts/base.html" %}
+{% load poll_extras %}
 {% load static %}
 {% block title %}Leoclimb - Merchandising{% endblock %}
 {% block description %}Découvrez les collections de leoclimb, le merchandising de l'association d'escalade du pole leonard de vinci{% endblock %}
@@ -10,24 +11,27 @@
 </section> 
 <section class="merchandising-component">
   <div class="container">
-    
-    <h2 class="subtitle">Colletion 2019-2020</h2>
-    <div class="wrapper row pb-5">
-      <div class="col-md-3">
-        <div class="card">
-          <div class="view overlay">
-            <img src="{% static "images/collections/tshirtDVCC2.jpg" %}"  class="card-img-top" alt="TSHIRT DVCC2"/>
-            <div class="mask rgba-white-slight"></div>
-          </div>
-          <div class="card-body text-center">
-            <h3>T-shirt</h3>
-            <h4 class="font-weight-bold blue-text">
-              <strong>Devinci Climbing Contest</strong>
-            </h4>
+  {% for marchendising  in obj %}
+    <h2 class="subtitle">{{marchendising.titre}}</h2>
+      <div class="wrapper row pb-5">
+      {% for img in marchendising.merchandisingimage_set.all %}
+         <div class="col-md-3">
+          <div class="card">
+            <div class="view overlay">
+              <img src="{{MEDIA_URL}}{{img.image}}"  class="card-img-top" alt="collection Leoclimb"/>
+              <div class="mask rgba-white-slight"></div>
+            </div>
+            <div class="card-body text-center">
+              <h3>{{img.model}}</h3>
+              <h4 class="font-weight-bold blue-text">
+                <strong>{{img.titre}}</strong>
+              </h4>
+            </div>
           </div>
         </div>
-      </div>
-    </div>  
+      {% endfor %}
+      </div>  
+    {% endfor %}
   </div>
 </section>
 {% endblock %}

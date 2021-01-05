@@ -14,7 +14,8 @@
     }
 
     @include max-screen($phone){
-        height: 850px;
+        height: 710px;
+        background-position: left bottom;
     }
     .row{
         align-items: center;
@@ -56,6 +57,10 @@
 
         .main-btn-component{
             margin-top: 40px;
+
+            @include max-screen($mobile){
+                font-size: 14px;
+            }
           
         }
     }
@@ -79,6 +84,10 @@
         padding: 20px 0;
         text-align: center;
         margin: 0 auto;
+
+        @include max-screen($mobile){
+            margin-top: -50px;
+        }
     }
 
     img{

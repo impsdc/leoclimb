@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="{% static '/app.css' %}"><link>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700" rel="stylesheet">
     </head>
-<body>
+<body class="{% block bodycss %}{% endblock %}">
     
     {% include 'layouts/header.html' %}
     {% block content %}{% endblock %}

@@ -5,8 +5,8 @@
 .inscription-component{
         .intro{
             text-align: center;
+            padding: 20px;
         }
-
 
         .contain-form{
             margin: 20px 0;
@@ -77,11 +77,11 @@
 
             .question{
                     margin: 15px 0;
+                    margin-top: 30px;
                     width: 70%;
 
                     select,input{
                         color: $color-brand;
-                        margin: 0;
                         width: 100%;
                     }
             }
@@ -128,4 +128,40 @@
                 color: $color-yellow;
             }
         }   
+
+        .msg{
+            padding: 7px;
+            background: #27ae60;
+            margin: 20px auto;
+            border-radius: 5px;
+            width: 300px;
+            color: $color-brand;
+            text-align: center;
+
+            p{
+                margin: 0;
+            }
+
+            .error{
+                color: red;
+            }
+        }
+
+}
+
+.disable{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 350px;
+
+    @include max-screen($mobile){
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+
+    a{
+        color: $color-brand;
+    }
 }

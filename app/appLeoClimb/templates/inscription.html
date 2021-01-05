@@ -1,28 +1,38 @@
 {% extends "layouts/base.html" %} {%block bodycss %}inscription-page{% endblock %} {% load static %} {% block content %}
+ {% for tqt in  obj%}
+  {% if obj.active %}
 <section class="intro-basic-component">
   <div class="container">
-    <h1 class="title">Inscription Devinci Climbing Contest</h1>
+  {{obj}}
+    <h1 class="title">{{obj.titre}} {{obj.date}}</h1>
   </div>
 </section>
 <section class="inscription-component">
   <div class="container">
     <div class="intro">
-      <p>{% lorem 1 b random %}</p>
+      <p>{{ obj.description }}</p>
     </div>
+    {% if messages %}
+        <div class="msg">
+            {% for message in messages %}
+                <p  {% if message.tags %} class=" {{message.tags}} " {% endif %}> {{ message }} </p>
+            {% endfor %}
+        </div>
+    {% endif %}
     <form action="{% url 'createInscription' %}" method='POST'>
     {% csrf_token %}
       <div class="contain-form">
         <div>
           <label class="form-label" for="nom">Nom</label>
-          <input type="nom" id="nom" name="nom" maxlength='100' required/>
+          <input type="text" id="nom" name="nom" maxlength='70' required/>
         </div>
         <div>
           <label class="form-label" for="prenom">Prénom</label>
-          <input type="text" id="prenom" name="prenom" maxlength='100' required/>
+          <input type="text" id="prenom" name="prenom" maxlength='70' required/>
         </div>
         <div>
           <label class="form-label" for="ecole">Ecole</label>
-          <input type="text" id="ecole" name="ecole" maxlength='100' required/>
+          <input type="text" id="ecole" name="ecole" maxlength='70' required/>
         </div>
         <div class="select">
           <label class="form-label form-label-select" for="tshirt">Taille de t-shirt</label>
@@ -50,4 +60,13 @@
     </form>
   </div>
 </section>
-{% endblock %}
+{% else %}
+<section class="disable">
+  <p>Inscription non disponible pour le moment</p>
+  <a href="/" class="main-btn-component">
+    Retour à l'accueil
+  </a>
+</section>
+{% endif %}
+{% endfor %}
+{% endblock %}c

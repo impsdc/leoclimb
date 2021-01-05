@@ -29,7 +29,7 @@ urlpatterns = [
     path('Mentions-legales', views.mentions, name='mentions'), 
     
     #merchandising
-    path('merchandising', views.merchandising, name='merchandising'), 
+    path('Merchandising', views.merchandising, name='merchandising'), 
 
     #dcc Inscription
     path('Devinci-Climbing-Conntest/inscription', views.inscription, name='inscription'), 
