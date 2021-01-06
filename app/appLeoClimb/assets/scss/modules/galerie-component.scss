@@ -10,12 +10,17 @@
     }
     
 
-    .photo-item{
+    .grid-item{
+
+        .photo-item{
+            list-style: none;
+        }
+        width: 32%;
+        margin: 0 5px;
         img{
             width: 100%;
             object-fit: cover;
-            height: 300px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         p{

@@ -5,6 +5,7 @@ if(document.querySelector('.galerie-component')){
 }
 
 if(document.querySelector('.evenement-component')){
+    document.querySelector('.footer-component').style.background = "#22262a"
     if(document.querySelectorAll('.photo-item').length === 3){
         document.querySelector('.footer-component').style.padding = "100px 50px"
     }

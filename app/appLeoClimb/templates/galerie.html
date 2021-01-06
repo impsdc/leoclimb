@@ -3,80 +3,20 @@
 {% block content %}
 <section class="galerie-component">
   <h1 class="title white">Galerie de Leoclimb</h1>
-    <main class="main-content">
       <div class="container-fluid photos">
-        <div class="row align-items-stretch">
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/Murmur-2020" class="d-block photo-item" >
-              <img src="{% static "images/events/murmurISSY2020/murmurIssy2.jpg" %}" alt="Event murmur 2020" height="100" width="100" />
-              <strong>
-                <p class="text-center text-white">Murmur à Issy-Les-Moulineaux - 2020</p>
-              </strong>
-            </a>
+        <div class="row align-items-stretch evenement-wrapper-component">
+          {% for galerie in obj %}
+            <div class="grid-item">
+              <a href="{% url 'evenement' titre=galerie.titre %}" class="d-block photo-item" >
+                <img src="{{MEDIA_URL}}{{galerie.galerieimage_set.first.image}}" alt="{{galerie.titre}}" />
+                <strong>
+                  <p class="text-center text-white">{{ galerie.titre }}</p>
+                </strong>
+              </a>
             <br>
           </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/JPO-2020" class="d-block photo-item" >
-            <img src="{% static "images/events/journeePO2020/jpo3.JPG" %}" alt="Event JPO 2020" height="100" width="100" />
-            <strong><p class="text-center text-white">Journée Portes Ouvertes - 2020 </p></strong>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/DCC-2019" class="d-block photo-item" >
-              <img src="{% static "images/events/DVC2019/DVCC2019-1.jpg" %}" alt="Event 1" height="100" width="100" />
-              <strong>
-                <p class="text-center text-white">Devinci Climbing Contest - 4 Avril 2019</p>
-              </strong>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/Shooting-2019" class="d-block photo-item" >
-          <img src="{% static "images/events/shooting2019/shooting2019Asso1.jpg" %}" alt="Event 2" height="100" width="100" />
-            <strong><p class="text-center text-white">Shooting asso - Mars 2020 </p></strong>
-            </a>
-            <br>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/LeoClimb-Etranger-2019" class="d-block photo-item">
-              <img src="{% static "images/events/LEOCLIMBPartout/leoClimbCanada.jpg" %}" alt="Event 3" height="100" width="100" />
-              <strong>
-                <p class="text-center text-white">LeoClimb s'exporte à l'étranger </p>
-              </strong>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/Contest-Blocbuster-2019" class="d-block photo-item">
-              <img src="{% static "images/events/contestBB2019/contest2019bb1.jpg" %}" alt="Event 4" height="100" width="100" />
-              <strong>
-                <p class="text-center text-white">Contest Blocbuster - Décembre 2019</p>
-              </strong>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/Remise-Collection-2019" class="d-block photo-item">
-              <img src="{% static "images/events/2019Remise/remise2019Pull1.jpg" %}" alt="Event 5" height="100" width="100" />
-              <strong>
-                <p class="text-center text-white">Remise de la collection LeoClimb - Décembre 2019</p>
-              </strong>
-            </a>
-            <br>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/Murmur-2019" class="d-block photo-item">
-          <img src="{% static "images/events/murmurISSY2019/murmur2019issy1.jpg" %}" alt="Event 6" height="100" width="100" />
-            <strong><p class="text-center text-white">Murmur à Issy-les-Moulineaux - Novembre 2019 </p></strong>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="/Evenements/WEI-2019" class="d-block photo-item">
-              <img src="{% static "images/events/WEIFontainebleau2019/2019wei1.jpg" %}" alt="Event 7" height="100" width="100" />
-              <strong>
-                <p class="text-center text-white">WEI à Fontainebleau - Octobre 2019</p>
-              </strong>
-            </a>
-          </div>
+          {% endfor %}
         </div>
       </div>
-    </main>
 </section>
 {% endblock %}

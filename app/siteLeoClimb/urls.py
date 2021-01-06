@@ -42,13 +42,9 @@ urlpatterns = [
     url('', include('appLeoClimb.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# handler400 = 'appLeoClimb.views.bad_request'
-# handler403 = 'appLeoClimb.views.permission_denied'
-# handler404 = 'appLeoClimb.views.page_not_found'
+handler400 = 'siteLeoClimb.views.bad_request'
+handler403 = 'siteLeoClimb.views.permission_denied'
+handler404 = 'siteLeoClimb.views.page_not_found'
 handler500 = 'siteLeoClimb.views.server_error'
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls))
-    ] + urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
