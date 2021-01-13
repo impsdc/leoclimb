@@ -1,9 +1,11 @@
-{% extends "layouts/base.html" %} {%block bodycss %}inscription-page{% endblock %} {% load static %} {% block content %}
- {% for tqt in  obj%}
-  {% if obj.active %}
+{% extends "layouts/base.html" %} {%block bodycss %}inscription-page{% endblock %} {% load static %}
+{% block title %}Leoclimb - Incription au Devinci Climbing Contest{% endblock %}
+{% block description %}Inscrivez-vous au Devinci Climbing Contest, compétition d'escalade universitaire à la Défense{% endblock %}
+{% block content %}
+{% for obj in obj%}
+{% if obj.active is True %}
 <section class="intro-basic-component">
   <div class="container">
-  {{obj}}
     <h1 class="title">{{obj.titre}} {{obj.date}}</h1>
   </div>
 </section>

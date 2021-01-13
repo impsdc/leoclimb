@@ -1,5 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load static %}
+{% block title %}Leoclimb - Notre bureau{% endblock %}
+{% block description %}Consulter les menbres du bureau de Leoclimb, l'association universitaire d'escalade du pôle leonard de vinci{% endblock %}
 {% block content %}
 <section class="intro-component">
   <div class="container">
@@ -10,7 +12,7 @@
             {% for menbre in obj%}
               <div class="item-slider">
                 <div class="wrapper-img">
-                  <a href="https://www.instagram.com/impsdc/" target="_blank">
+                  <a href="{{menbre.insta}}" target="_blank">
                       <img src="{{MEDIA_URL}}{{menbre.image}}" alt="{{menbre.nom}}"/>
                   </a>
                 </div>
@@ -49,20 +51,14 @@
     </div>  
   </div>
 </section> 
-<section class="promo-component">
+{% for promo in promo  %}
+  <section class="promo-component">
   <div class="container">
-    <h3 class="title">Bureau leoclimb 2019-2020</h3>
+    <h3 class="title">{{promo.annee}}</h3>
     <div class="wrapper-promo">
-      <img src="{% static '/images/bureau/bureau2019.jpg'%}" alt="Bureau leoclimb promo 2019" />
+      <img src="{{MEDIA_URL}}{{promo.image}}" alt="{{promo.annee}}" />
     </div>
   </div>
 </section>
-<section class="promo-component">
-  <div class="container">
-    <h3 class="title">Bureau leoclimb 2018-2019</h3>
-    <div class="wrapper-promo">
-      <img src="{% static '/images/bureau/bureau2018.jpg'%}" alt="Bureau leoclimb promo 2019" />
-    </div>
-  </div>
-</section>
+{% endfor %}
 {% endblock %}

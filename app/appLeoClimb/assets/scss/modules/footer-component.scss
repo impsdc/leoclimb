@@ -58,7 +58,7 @@
 
         .under-footer{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             margin: 0px 50px;
 
@@ -67,6 +67,9 @@
                justify-content: center;
             }
 
+            .mentions{
+                margin-right: auto;
+            }
             div{
                 color: $white;
                 display: flex;
@@ -80,6 +83,11 @@
                     }
                 }
 
+                h4{
+                    color: #ffffff;
+                    font-size: 16px;
+                    margin-bottom: 0px;
+                }
                 p{  
                     margin: 0;
                     padding-right: 10px;
@@ -87,6 +95,7 @@
                     
                     a{
                         color: #ffffff;
+                        font-size: 16px;
 
                         &:hover{
                             opacity: 0.3;
@@ -97,9 +106,17 @@
            
             }
 
+            .polo{
+                margin-left: 160px;
+
+                @include max-screen(1000px){
+                    margin-left: unset;
+                }
+            }
 
             .contact{
                 display: flex;
+                margin-left: auto;
 
                 @include max-screen($mobile){
                     flex-direction: column-reverse;

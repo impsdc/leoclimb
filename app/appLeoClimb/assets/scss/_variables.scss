@@ -114,15 +114,15 @@ ul{
 
 #reseaux{
   display: flex;
-
+  margin: 0;
     li{
         margin: 0 10px;
         a{
-            font-size: 1rem;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 30px;
             height: 30px;
-            line-height: 30px;
             text-align: center;
             border-radius: 50%;
             background: $white;

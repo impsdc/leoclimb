@@ -4,6 +4,7 @@ from django.contrib import messages
 
 from .models import Post
 from .models import Bureau
+from .models import Promo
 from .models import Palmare
 from .models import Membre
 from .models import Partenaire
@@ -15,12 +16,13 @@ from .models import DevinciClimbingContest
 
 #Home
 def home(request):
-	obj = Partenaire.objects.all()
+	obj = Partenaire.objects.all().order_by('nom')
 	return render(request, 'home.html', {'obj':obj})
 
 #dcc
 def dcc(request):
-	return render(request, 'dcc.html')
+	obj = Galerie.objects.get(id=7)
+	return render(request, 'dcc.html', {'obj':obj})
 
 #galerie
 def galerie(request):
@@ -35,9 +37,10 @@ def evenement(request, titre):
 
 #menbres
 def menbre(request):
-	obj = Bureau.objects.all()
+	obj = Bureau.objects.all().order_by('place')
+	promo = Promo.objects.all()
 
-	return render(request, 'menbres.html', {'obj':obj})
+	return render(request, 'menbres.html', {'obj':obj, 'promo': promo})
 
 #palmares
 def palmares(request):

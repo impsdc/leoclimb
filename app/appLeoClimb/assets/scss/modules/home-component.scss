@@ -5,6 +5,10 @@
     background-position: center bottom;
     height: 700px;
 
+    @include max-screen(1300px){
+        height: 800px;
+    }
+
     @include max-screen(1000px){
         height: 1100px;
     }

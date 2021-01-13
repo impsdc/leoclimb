@@ -15,20 +15,34 @@
         <meta name="theme-color" content="#ffffff">
         
         <link rel="icon" href="{% static "images/logoNoir.jpg" %}">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <link href="{% static 'fonts/NotoSansJP-Medium.otf' %}" rel="stylesheet">
         <link rel="stylesheet" href="{% static '/app.css' %}"><link>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ2D6GT3HS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JQ2D6GT3HS');
+        </script>
     </head>
-<body class="{% block bodycss %}{% endblock %}">
+<body class="loading {% block bodycss %} {% endblock %}">
+         <div id="loader">
+            <div id="d1"></div>
+            <div id="d2"></div>
+            <div id="d3"></div>
+            <div id="d4"></div>
+            <div id="d5"></div>
+        </div>
     
     {% include 'layouts/header.html' %}
     {% block content %}{% endblock %}
     {% include 'layouts/footer.html'%}
 
     {% block script %}
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript" src="{% static '/main.js' %}"></script>
-    <script type="text/javascript" src="http://127.0.0.1:8080/static/main.js"></script>
     {% endblock %}
 </body>
 </html>

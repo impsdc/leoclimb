@@ -1,5 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load static %}
+{% block title %}Leoclimb - Devinci Climbing Contest compétition d'escalade universitaire{% endblock %}
+{% block description %}Prédentation de Devinci Climbing Contest compétition d'escalade universitaire organisé par Leoclimb{% endblock %}
 {% block content %}
 <section class="dcc-component">
     <div class="container">
@@ -12,7 +14,7 @@
             <h2><strong>Devinci Climbing Contest</strong></h2>
          </div>
           <div class="wrapper-btn">
-            <a class="main-btn-component">Voir les photos</a>
+            <a class="main-btn-component" href={% url 'evenement' titre=obj.titre %}>Voir les photos</a>
             <a class="main-btn-component" href={% url 'inscription'%}>Inscription</a>
           </div>
         </div>
