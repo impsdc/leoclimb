@@ -9,7 +9,6 @@ services:
       - POSTGRES_USER=paul
       - POSTGRES_PASSWORD=paultapedes7a
     volumes:
-      - ./db-export:/home/db-export
       - ./data:/var/lib/postgresql/data
     ports: 
       - 5000:5432
@@ -20,11 +19,10 @@ services:
     container_name: app-leoclimb
     restart: always
 #    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn siteLeoClimb.wsgi:application --bind=0.0.0.0:8000
     depends_on:
       - db
     links:
       - db:db
 volumes:
   data:
-  db-export:
