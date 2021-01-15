@@ -6,7 +6,7 @@
     height: 700px;
 
     @include max-screen(1300px){
-        height: 800px;
+        height: 820px;
     }
 
     @include max-screen(1000px){
@@ -18,7 +18,7 @@
     }
 
     @include max-screen($phone){
-        height: 710px;
+        height: 820px;
         background-position: left bottom;
     }
     .row{

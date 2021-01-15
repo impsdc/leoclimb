@@ -120,6 +120,7 @@
 
                 @include max-screen($mobile){
                     flex-direction: column-reverse;
+                   
 
                     p{
                         padding: 5px;
