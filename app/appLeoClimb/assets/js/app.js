@@ -16,7 +16,6 @@ $(document).ready(function() {
 
     // When both promises complete, redo the Masonry layout.
     $.when(images_loaded).done(function() {
-        console.log("Redoing Masonry");
         // Try commenting out this line; without it, masonry won't find any images
         // and the layout should be standard HTML.
         var grid = document.querySelector('.evenement-wrapper-component');

@@ -24,6 +24,19 @@ Import db
 ```
 docker exec -it leoclimb-db bash
 psql -U paul -d leoclimb -U paul -f db-export
-
 ```
 
+## Static files for productions
+
+```
+python3 manage.py collectstatic
+```
+It will create static folder containing static app images and static admin css
+then in you ngnix conf render static folder
+```
+ location /static {
+                autoindex on;
+                alias {path to manage.py}/static;docker
+        }
+
+```
