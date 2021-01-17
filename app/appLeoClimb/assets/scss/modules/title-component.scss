@@ -47,6 +47,10 @@
         width: 105%;
         display: block;
         background-color: $color-yellow;
+
+        @include max-screen($mobile){
+            width: 100%;
+        }
     }
 
     &:before{

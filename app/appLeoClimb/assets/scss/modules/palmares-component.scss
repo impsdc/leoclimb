@@ -8,6 +8,10 @@
         margin: 20px 0;
         flex-direction: row;
 
+        @include max-screen(1600px){
+            margin: 40px 0;
+        }
+
         @include max-screen($small){
             flex-direction: column-reverse;
         }
@@ -47,8 +51,16 @@
                     background-repeat: no-repeat;
                     margin-left: -100px;
 
+                    @include max-screen(1600px){
+                        top: -30%;
+                    }
+
                     @include max-screen($small){
                         top: -80%;
+                    }
+
+                    @include max-screen($mobile){
+                        top: 0%;
                     }
                 }
             }
@@ -93,6 +105,10 @@
 
                 @include max-screen($small){
                     margin: auto;
+                }
+
+                @include max-screen($mobile){
+                    max-width: 100%;
                 }
             }
         }

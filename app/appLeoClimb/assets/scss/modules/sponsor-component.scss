@@ -63,7 +63,7 @@
 
                 @include max-screen(500px){
                     width: 270px;
-                    height: 500px;
+                    height: 370px;
                 }
 
                 @include max-screen($phone){
@@ -109,6 +109,10 @@
                         text-indent:99999999999999px;
                         opacity: .5;
                         outline: none;
+
+                        @include max-screen($mobile){
+                            margin: 0 10px ;
+                        }
                     }
         
                     &.slick-active{

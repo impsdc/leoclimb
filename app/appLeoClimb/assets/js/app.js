@@ -9,30 +9,26 @@ import './modules/modal-blog';
 import './modules/galerie';
 import './modules/forms';
 
-$(document).ready(function() {
 
-    // Set up two Deferred objects, to track images and fonts.
-    var images_loaded = $.Deferred()
+imagesLoaded.makeJQueryPlugin( $ );
 
-    // When both promises complete, redo the Masonry layout.
-    $.when(images_loaded).done(function() {
-        // Try commenting out this line; without it, masonry won't find any images
-        // and the layout should be standard HTML.
-        var grid = document.querySelector('.evenement-wrapper-component');
-        if(grid){
-            var msnry = new Masonry( grid, {
-                itemSelector: '.grid-item',
-            });
-        }
 
+
+let grid = document.querySelector('.evenement-wrapper-component');
+if(grid){
+    $('.evenement-wrapper-component').imagesLoaded( function() {
+        document.body.classList.remove("loading")
+                var msnry = new Masonry( grid, {
+                    itemSelector: '.grid-item',
+                });
     });
 
-    // Deal with the image loading process using Masonry's imagesLoaded plugin.
-    imagesLoaded( Array.prototype.map.call(document.images, img => img.src), function() {
-      document.body.classList.remove("loading")
-      images_loaded.resolve();
+}else{
+    $('section').imagesLoaded( function() {
+        document.body.classList.remove('loading')
     });
-});
+}
+imagesLoaded.makeJQueryPlugin( $ );
 
 /* slider component */
 $(document).ready(function() {

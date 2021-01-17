@@ -36,7 +36,6 @@ then in you ngnix conf render static folder
 ```
  location /static {
                 autoindex on;
-                alias {path to manage.py}/static;docker
+                alias {path to manage.py}/static;
         }
-
 ```

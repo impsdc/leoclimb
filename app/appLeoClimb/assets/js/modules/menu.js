@@ -9,7 +9,7 @@ export default (() => {
   const html = document.documentElement;
 
   const clickHandler = () => {
-    const height = nav.classList.contains(classes.active) ? 0 : window.innerHeight - (header.offsetHeight - 2);
+    const height = nav.classList.contains(classes.active) ? 0 : window.innerHeight - (header.offsetHeight) + 5;
 
     menuToggler.classList.toggle(classes.active);
     nav.classList.toggle(classes.active);
@@ -25,7 +25,7 @@ export default (() => {
   };
 
   const resizeHandler = () => {
-    const height = nav.classList.contains(classes.active) ? window.innerHeight - (header.offsetHeight - 1) : 0;
+    const height = nav.classList.contains(classes.active) ? window.innerHeight - (header.offsetHeight) : 0;
     nav.style.maxHeight = `${height}px`;
   };
 

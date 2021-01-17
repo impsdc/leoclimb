@@ -33,7 +33,6 @@ gulp.task("watch", ["browser-sync"], function() {
     gulp.watch('./assets/scss/**/*.scss', ["style"], browserSync.reload);
     gulp.watch("./templates/*.html").on("change", browserSync.reload) 
     gulp.watch("./templates/layouts/*.html").on("change", browserSync.reload) 
-    gulp.watch("./templates/evenements/*.html").on("change", browserSync.reload) 
     gulp.watch("./templates/admin/*.twig").on("change", browserSync.reload) 
 
 });

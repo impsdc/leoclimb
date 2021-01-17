@@ -92,7 +92,7 @@ def createInscription(request):
 
 #mentions
 def mentions(request):
-	return render(request, 'mentions.html', {'obj': obj})
+	return render(request, 'mentions.html')
 
 #merchandising
 def merchandising(request):

@@ -17,7 +17,7 @@ urlpatterns = [
     path('Galerie', views.galerie, name='galerie'), 
 
     #menbre
-    path('Menbres', views.menbre, name='menbres'), 
+    path('Bureau', views.menbre, name='menbres'), 
 
     #palmares
     path('Palmares', views.palmares, name='palmares'), 

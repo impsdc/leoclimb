@@ -117,6 +117,7 @@
           @include max-screen($small){
             display: flex;
             justify-content: center;
+            margin: 20px 0
           }
         }      
     }
@@ -148,10 +149,6 @@
         &.active {
           &:hover {
             background-color: rgba($color-brand, .1);
-  
-            .navbar-toggler-icon {
-              background-color: $black;
-            }
           }
   
           .navbar-toggler-icon {
