@@ -34,10 +34,6 @@
         font-size: 1.5rem;
     }
 
-    @include max-screen($mobile){
-        width: 200px;
-    }
-
     &:after{
         position: absolute;
         bottom: 0;

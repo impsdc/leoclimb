@@ -63,11 +63,12 @@
 
                 @include max-screen(500px){
                     width: 270px;
-                    height: 370px;
+                    height: 490px;
                 }
 
                 @include max-screen($phone){
                     border: none;
+                    height: 370px;
                 }
                 
               .wrapper-logo{
@@ -83,8 +84,13 @@
                         filter: grayscale(1);
                     }
                 }
+
                 p{
                     margin-top: auto;
+
+                    @include max-screen($mobile){
+                        font-size: 15px;
+                    }
 
                     @include max-screen($phone){
                         font-size: 12px;
