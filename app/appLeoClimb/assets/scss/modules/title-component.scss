@@ -32,11 +32,13 @@
     
     @include max-screen($mobile){
         font-size: 1.5rem;
-    }
-
-    @include max-screen($mobile){
         max-width: 270px;
     }
+
+    @include max-screen($phone){
+        max-width: 220px;
+    }
+
 
     &:after{
         position: absolute;
