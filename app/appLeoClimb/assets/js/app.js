@@ -1,4 +1,6 @@
 setTimeout(() => document.body.classList.add('render'), 50);
+var Turbolinks = require("turbolinks")
+Turbolinks.start()
 import $ from "jquery"
 import "./libs/slick.min.js"
 import Masonry from "masonry-layout"
@@ -9,10 +11,7 @@ import './modules/modal-blog';
 import './modules/galerie';
 import './modules/forms';
 
-
 imagesLoaded.makeJQueryPlugin( $ );
-
-
 
 let grid = document.querySelector('.evenement-wrapper-component');
 if(grid){
