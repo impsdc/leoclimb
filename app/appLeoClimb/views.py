@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.template import RequestContext
 from django.contrib import messages
 
+from .models import Accueil
 from .models import Post
 from .models import Bureau
 from .models import Promo
@@ -17,7 +18,9 @@ from .models import DevinciClimbingContest
 #Home
 def home(request):
 	obj = Partenaire.objects.all().order_by('nom')
-	return render(request, 'home.html', {'obj':obj})
+	accueil = Accueil.objects.get()
+
+	return render(request, 'home.html', {'obj':obj, 'accueil':accueil})
 
 #dcc
 def dcc(request):
@@ -56,7 +59,7 @@ def actu(request):
 
 #inscripiton
 def inscription(request):	
-	obj = DevinciClimbingContest.objects.all()
+	obj = DevinciClimbingContest.objects.get()
 
 	return render(request, 'inscription.html', {'obj': obj})
 

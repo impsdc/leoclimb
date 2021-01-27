@@ -7,14 +7,15 @@ from .Partenaire import Partenaire
 from .devinciclimbingcontest import DevinciClimbingContest, Inscription
 from .Galerie import Galerie, GalerieImage
 from .Merchandising import Merchandising, MerchandisingImage
+from .Home import Accueil
 
+admin.site.register(Accueil)
 admin.site.register(Post)
 admin.site.register(Bureau)
 admin.site.register(Promo)
 admin.site.register(Palmare)
 admin.site.register(Membre)
 admin.site.register(Partenaire)
-admin.site.register(DevinciClimbingContest)
 admin.site.register(Inscription)
 admin.site.register(Galerie)
 admin.site.register(GalerieImage)

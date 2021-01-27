@@ -9,6 +9,9 @@ class DevinciClimbingContest(TimespamtedModel):
 
     def __str__(self):
         return self.titre
+
+    def has_change_permission(self, request, obj=None):
+        return False
     
 class Inscription(models.Model):
     nom = models.CharField(max_length=100, blank=False, null=False)

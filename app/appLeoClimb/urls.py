@@ -32,9 +32,9 @@ urlpatterns = [
     path('Merchandising', views.merchandising, name='merchandising'), 
 
     #dcc Inscription
-    path('Devinci-Climbing-Conntest/inscription', views.inscription, name='inscription'), 
+    path('Devinci-Climbing-Contest/inscription', views.inscription, name='inscription'), 
     #handle form
-    path('Devinci-Climbing-Conntest/inscription/submit', views.createInscription, name='createInscription'), 
+    path('Devinci-Climbing-Contest/inscription/submit', views.createInscription, name='createInscription'), 
 
     path('Evenement/<str:titre>/', views.evenement, name="evenement"),
 ]

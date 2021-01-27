@@ -6,7 +6,7 @@
 {% if obj.active is True %}
 <section class="intro-basic-component">
   <div class="container">
-    <h1 class="title">{{obj.titre}} {{obj.date}}</h1>
+    <h1 class="title">{{obj.titre}} pour le {{obj.date}}</h1>
   </div>
 </section>
 <section class="inscription-component">
@@ -45,7 +45,7 @@
           </select>
         </div>
         <div class="select question">
-          <label class="form-label form-label-select" for="question"
+          <label class="form-label form-label-select big" for="question"
             >Comment avez-vous entendu parler du contest ?
           </label>
           <select id="question" name="question" required >

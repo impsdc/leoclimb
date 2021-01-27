@@ -39,7 +39,6 @@
 
                 input, select {
                     min-width: unset;
-                    z-index: 1;
                     background-color: #fff;
                     border: none;
                     border-bottom:2px solid $color-brand;
@@ -72,6 +71,10 @@
             .select{
                 label{
                     top: -20px;
+                }
+
+                .big{
+                    top: -55px;
                 }
             }
 
