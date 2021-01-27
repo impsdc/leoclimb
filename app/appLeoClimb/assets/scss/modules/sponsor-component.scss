@@ -138,7 +138,7 @@
             #sliderNext{
                 position: absolute;
                 top: 45%;
-                right:2%;
+                right:1%;
                 outline: none;
                 border:1px solid $color-brand;
                 z-index: 0;
@@ -152,7 +152,7 @@
                 transition: 0.45s;
 
                 @include max-screen(1200px){
-                    right: 0%;
+                    right: -1%;
                 }
 
                 @include max-screen($phone){
@@ -163,7 +163,7 @@
             #sliderPrev{
                 position:absolute;
                 top: 45%;
-                left: 2%;
+                left: 1%;
                 outline: none;
                 border:1px solid $color-brand;
                 z-index: 0;
@@ -177,7 +177,7 @@
                 transition: 0.45s;
 
                 @include max-screen(1200px){
-                    left: 0%;
+                    left: -1%;
                 }
 
                 @include max-screen($phone){

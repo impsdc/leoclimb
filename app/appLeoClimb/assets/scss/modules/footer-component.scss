@@ -112,6 +112,14 @@
 
             .polo{
                 margin-left: 160px;
+                
+                a{
+                    color: #fff;
+                    
+                    &:hover{
+                        opacity: 0.3;
+                    }
+                }
 
                 @include max-screen(1000px){
                     margin-left: unset;
