@@ -82,3 +82,8 @@ body.loading::before{
       max-width: 1400px;
   }
 }
+
+.turbolinks-progress-bar{
+  height: 3px;
+  background-color: $color-yellow;
+}

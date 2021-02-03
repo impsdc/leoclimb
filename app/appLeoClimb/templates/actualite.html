@@ -15,9 +15,9 @@
             <div class="wrapper-item-blog">
                 <div class="contain-image"> 
                     <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{post.image}}"  id="open"/>
-                    <span class="more">
+                    <p class="more">
                         Cliquer sur l'image pour mieux voir
-                    </span>
+                    </p>
                 </div>
                 <div class="contain-description">
                     <h2 class="blog-title">{{post.title}}</h2>
@@ -35,7 +35,7 @@
                 <div class="close">
                     <span id="close">&times;</span>
                 </div>
-                <img alt='murmur issy les moulineaux esalade' id="modal-content"/>
+                <img alt='{{post.title}}' id="modal-content"/>
                 <p class="caption">{{post.title}}</p>
             </div>
           </div>

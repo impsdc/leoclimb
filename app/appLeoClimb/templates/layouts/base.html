@@ -6,17 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
         <title>{% block title %}{% endblock %}</title>
         <meta name="description" content="{% block description %}{% endblock %}">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        {# <link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials"> #}
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1b3e">
-        <meta name="msapplication-TileColor" content="#1b1b3e">
         <meta name="theme-color" content="#ffffff">
-        
+        <meta name="turbolinks-cache-control" content="no-cache">
         <link rel="icon" href="{% static "images/logoNoir.jpg" %}">
         <link rel="stylesheet" href="{% static '/app.css' %}"><link>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ2D6GT3HS"></script>
         <script>
@@ -26,8 +19,9 @@
 
         gtag('config', 'G-JQ2D6GT3HS');
         </script>
+        <script defer src="{% static '/main.js' %}" data-turbolinks-eval="false"></script> 
     </head>
-<body class="loading {% block bodycss %} {% endblock %}">
+    <body class="on-top {% block bodycss %}{% endblock %}">
          <div id="loader">
             <div id="d1"></div>
             <div id="d2"></div>
@@ -41,8 +35,8 @@
     {% include 'layouts/footer.html'%}
 
     {% block script %}
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="{% static '/main.js' %}"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" data-turbolinks-eval="false" ></script> 
+    {% comment %} <script defer src="http://localhost:8080/main.js" data-turbolinks-eval="false"></script> {% endcomment %} 
     {% endblock %}
 </body>
 </html>

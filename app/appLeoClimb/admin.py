@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Accueil, DevinciClimbingContest
 
 #making model unique
-""" @admin.register(Accueil)
+@admin.register(Accueil)
 class AuthorAdmin(admin.ModelAdmin):
 
     # This will help you to disbale add functionality
@@ -11,7 +11,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
     # This will help you to disable delete functionaliyt
     def has_delete_permission(self, request, obj=None):
-        return False """
+        return False
 
 #making model unique
 @admin.register(DevinciClimbingContest)

@@ -9,7 +9,6 @@ from .Galerie import Galerie, GalerieImage
 from .Merchandising import Merchandising, MerchandisingImage
 from .Home import Accueil
 
-admin.site.register(Accueil)
 admin.site.register(Post)
 admin.site.register(Bureau)
 admin.site.register(Promo)

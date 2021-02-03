@@ -1,10 +1,6 @@
 import { classes } from "../helpers";
 
-export default (() => {
-  const instances = [];
-  const forms = [...document.querySelectorAll('form')];
-
-  class Form {
+  export default class Form {
     constructor(form) {
       this.form = form;
       this.fields = [...this.form.querySelectorAll('input:not([type="hidden"]), textarea, select')];
@@ -39,7 +35,4 @@ export default (() => {
         target.classList.add(classes.hasFocus);
       }
     }
-  }
-
-  return forms.map(item => instances.push(new Form(item)));
-})();
+  };

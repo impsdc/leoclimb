@@ -1,69 +1,27 @@
-setTimeout(() => document.body.classList.add('render'), 50);
+document.currentScript.setAttribute("data-turbolinks-eval", "false");
 var Turbolinks = require("turbolinks")
 Turbolinks.start()
-import $ from "jquery"
+
 import "./libs/slick.min.js"
-import Masonry from "masonry-layout"
-
-import "./helpers.js";
+import './modules/slider'
 import './modules/menu';
-import './modules/modal-blog';
+import Article from './modules/modal-blog';
 import './modules/galerie';
-import './modules/forms';
+import Form from './modules/forms'; 
 
-imagesLoaded.makeJQueryPlugin( $ );
+document.addEventListener('turbolinks:load', function(){
+    if(document.querySelector('.inscription-page')){
+        document.querySelector('.footer-component').style.marginTop = "auto"
+        const instances = [];
+        const forms = [...document.querySelectorAll('form')];
+        forms.map(item => instances.push(new Form(item)));
+    }
+})
 
-let grid = document.querySelector('.evenement-wrapper-component');
-if(grid){
-    $('.evenement-wrapper-component').imagesLoaded( function() {
-        document.body.classList.remove("loading")
-                var msnry = new Masonry( grid, {
-                    itemSelector: '.grid-item',
-                });
-    });
-
-}else{
-    $('section').imagesLoaded( function() {
-        document.body.classList.remove('loading')
-    });
-}
-imagesLoaded.makeJQueryPlugin( $ );
-
-/* slider component */
-$(document).ready(function() {
-    $('.slider-component').slick({
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        autoplaySpeed: 2000,
-        infinite: true,
-        autoplay: false,
-        arrows: true,
-        dots: true,
-        centerMode: true,
-        variableWidth: true,
-        nextArrow: $('#sliderNext'),
-        prevArrow: $('#sliderPrev'),
-      
-        responsive: [{
-                breakpoint: 832,
-                settings: {
-                    arrows: true,
-                    dots: true,
-                    autoplay: false,
-                    nextArrow: $('#sliderNext'),
-                    prevArrow: $('#sliderPrev'),
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true,
-                }
-            }
-        ]
-    });
-
-});
-
-//extra css for inscription page footer
-if(document.querySelector(".inscription-page")){
-    document.querySelector('.footer-component').style.marginTop = "auto"
-}
+document.addEventListener('turbolinks:load', function(){
+    if(document.querySelector('.actualite-component')){
+        const instances = [];
+        const article = [...document.querySelectorAll('.single-article')];
+        article.map(item => instances.push(new Article(item)));
+    }
+})

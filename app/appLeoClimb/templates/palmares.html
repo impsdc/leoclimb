@@ -20,7 +20,6 @@
                 <p class="date">Effectué en {{ palmares.date|date:"F Y"}}</p>
                 <p>
                 </p>
-                {{palmares|debug}}
                 {% for membre in palmares.membre_set.all|orderbyplace %}
                 <div class="single-menber-palmares">
                     <p class="name">

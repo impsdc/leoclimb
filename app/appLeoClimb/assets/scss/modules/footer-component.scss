@@ -95,6 +95,7 @@
                 p{  
                     margin: 0;
                     padding-right: 10px;
+                    text-align: center;
                     
                     
                     a{
@@ -123,6 +124,7 @@
 
                 @include max-screen(1000px){
                     margin-left: unset;
+                    text-align: center;
                 }
             }
 

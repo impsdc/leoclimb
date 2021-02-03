@@ -1,11 +1,11 @@
 import { classes } from '../helpers';
 import { debounce } from 'lodash';
-
+import $ from "jquery"
 export default (() => {
   const menuToggler = document.querySelector('.navbar-toggler');
+  const links = document.querySelectorAll('.nav-component ul li a');
   const nav = document.querySelector('.nav-component');
   const header = document.querySelector('.header-component');
-  const body = document.querySelector('body');
   const html = document.documentElement;
 
   const clickHandler = () => {
@@ -29,21 +29,22 @@ export default (() => {
     nav.style.maxHeight = `${height}px`;
   };
 
-  const scrollHandler = () => {
-    if (window.pageYOffset > header.offsetHeight) {
-      body.classList.remove(classes.jsNotScrolledDown);
-    } else {
-      body.classList.add(classes.jsNotScrolledDown);
-    }
-  };
-
   const bindEvents = () => {
-    scrollHandler();
     menuToggler.addEventListener('click', clickHandler);
+    links.forEach(element => {element.addEventListener("turbolinks:click", closeHandler)});
     window.addEventListener('resize', resizeHandler);
     window.addEventListener('orientationchange', closeHandler);
-    window.addEventListener('scroll', debounce(scrollHandler, 20));
+    $(document).on('turbolinks:load', function(){
+      window.addEventListener('scroll', debounce(scrollHandler, 10)); 
+    })
   };
 
+const scrollHandler = () => {
+    if (window.pageYOffset > document.querySelector('.header-component').offsetHeight) {
+        document.querySelector('body').classList.remove(classes.jsNotScrolledDown);
+      } else {
+        document.querySelector('body').classList.add(classes.jsNotScrolledDown);
+      }
+  };
   return bindEvents();
 })();

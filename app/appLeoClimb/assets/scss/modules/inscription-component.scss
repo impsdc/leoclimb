@@ -38,6 +38,7 @@
                 }
 
                 input, select {
+                    z-index: 0;
                     min-width: unset;
                     background-color: #fff;
                     border: none;
@@ -71,6 +72,7 @@
             .select{
                 label{
                     top: -20px;
+                    z-index: 0;
                 }
 
                 .big{
@@ -78,10 +80,19 @@
                 }
             }
 
+            .merch{
+                select{
+                    margin-top: 20px;
+                }
+            }
+
             .question{
-                    margin: 15px 0;
-                    margin-top: 30px;
+                    margin: 60px 0;
                     width: 70%;
+
+                    @include max-screen(1000px){
+                        width: 275px;
+                    }
 
                     select,input{
                         color: $color-brand;

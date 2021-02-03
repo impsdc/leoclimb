@@ -2,7 +2,6 @@
 {% block title %}Leoclimb - Incription au Devinci Climbing Contest{% endblock %}
 {% block description %}Inscrivez-vous au Devinci Climbing Contest, compétition d'escalade universitaire à la Défense{% endblock %}
 {% block content %}
-{% for obj in obj%}
 {% if obj.active is True %}
 <section class="intro-basic-component">
   <div class="container">
@@ -36,7 +35,7 @@
           <label class="form-label" for="ecole">Ecole</label>
           <input type="text" id="ecole" name="ecole" maxlength='70' required/>
         </div>
-        <div class="select">
+        <div class="select merch">
           <label class="form-label form-label-select" for="tshirt">Taille de t-shirt</label>
           <select id="tshirt" name="tshirt" required >
             <option>S</option>
@@ -70,5 +69,4 @@
   </a>
 </section>
 {% endif %}
-{% endfor %}
 {% endblock %}c

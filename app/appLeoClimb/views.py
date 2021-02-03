@@ -13,7 +13,7 @@ from .models import Inscription
 from .models import Galerie
 from .models import Merchandising
 from .models import DevinciClimbingContest
-
+import time
 
 #Home
 def home(request):

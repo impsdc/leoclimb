@@ -1,33 +1,31 @@
-var items = document.querySelectorAll(".single-article");
+export default class Article {
+  constructor(article) {
+    this.article = article
+    this.img = article.querySelector("#open"); 
+    this.modalImg = article.querySelector("#modal-content");
+    this.modal = article.querySelector(".modal-wrapper");
+    this.bindEvents(this.article, this.img, this.modal, this.modalimg);
+  }
 
-items.forEach(element => {
-  
-  let img = element.querySelector("#open");
-  let modalImg = element.querySelector("#modal-content");
-  let captionText = element.querySelector("#caption");
-  let modal = element.querySelector(".modal-wrapper");
+  bindEvents(article, img, modal, modalimg) {
+    this.img.addEventListener('click', function(){
 
-  if(element){
+      article.querySelector(".modal-wrapper").style.zIndex = 1;
+      article.querySelector(".modal-wrapper").style.opacity = 1;
+      article.querySelector("#modal-content").src = img.src;
   
-    img.onclick = function(){
-        modal.style.opacity = 1;
-        modal.style.zIndex = 1;
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-      }
-      
-      // Get the <span> element that closes the modal
-      let span = element.getElementsByClassName("close")[0];
-      
+      let span = article.getElementsByClassName("close")[0];
+        
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
         modal.style.opacity = 0;
         modal.style.zIndex = -1;
       }
-
-      element.querySelector('.modal-wrapper').onclick = function() {
+  
+      article.querySelector('.modal-wrapper').onclick = function() {
         modal.style.opacity = 0;
         modal.style.zIndex = -1;
       }
+  });   
   }
-});
+};
