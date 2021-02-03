@@ -1,24 +1,28 @@
 {% extends "layouts/base.html" %}
 {% load static %}
+{% block bodyconf %}data-turbolinks="false"{% endblock %} 
+{% block bodycss %}loading{% endblock %} 
+{% block meta %}<meta name="turbolinks-visit-control" content="reload">{% endblock %}
+
 {% block title %}Leoclimb - Nos galeries photos{% endblock %}
 {% block description %}Consulter les photos de Leoclimb{% endblock %}
 {% block content %}
-<section class="galerie-component">
-  <h1 class="title white">Galerie de Leoclimb</h1>
-      <div class="container-fluid photos">
-        <div class="row align-items-stretch evenement-wrapper-component">
-          {% for galerie in obj %}
-            <div class="grid-item">
-              <a href="{% url 'evenement' titre=galerie.titre %}" class="d-block photo-item" >
-                <img src="{{MEDIA_URL}}{{galerie.galerieimage_set.first.image}}" alt="{{galerie.titre}}" />
-                <strong>
-                  <p class="text-center text-white">{{ galerie.titre }}</p>
-                </strong>
-              </a>
-            <br>
+  <section class="galerie-component">
+    <h1 class="title white">Galerie de Leoclimb</h1>
+        <div class="container-fluid photos">
+          <div class="row align-items-stretch evenement-wrapper-component">
+            {% for galerie in obj %}
+              <div class="grid-item">
+                <a href="{% url 'evenement' titre=galerie.titre %}" class="d-block photo-item" >
+                  <img src="{{MEDIA_URL}}{{galerie.galerieimage_set.first.image}}" alt="{{galerie.titre}}" loading="lazy"/>
+                  <strong>
+                    <p class="text-center text-white">{{ galerie.titre }}</p>
+                  </strong>
+                </a>
+              <br>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
-      </div>
-</section>
+  </section>
 {% endblock %}

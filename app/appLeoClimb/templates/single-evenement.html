@@ -1,22 +1,26 @@
 {% extends "layouts/base.html" %}
 {% load static %}
+{% block bodyconf %}data-turbolinks="false"{% endblock %} 
+{% block bodycss %}loading{% endblock %} 
+{% block meta %}<meta name="turbolinks-visit-control" content="reload">{% endblock %}
+
 {% block title %}Leoclimb - {{obj.titre}}{% endblock %}
 {% block description %}Consulter les photos de l'évènement {{obj.titre}} organisé par Leoclimb, l'association universitaire d'escalade du pôle leonard de vinci  {% endblock %}
 {% block content %}
-<section class="galerie-component">
-  <h1 class="title white">{{obj.titre}}</h1>
-  <main class="main-content">
-    <div class="container-fluid photos">
-      <div class="row align-items-stretch evenement-wrapper-component">
-      {% for image in obj.galerieimage_set.all %}
-        <div class="grid-item">
-          <li class="d-block photo-item">
-            <img src="{{MEDIA_URL}}{{image.image}}" alt="Leoclimb Galerie{{obj.titre}}" />
-          </li>
+  <section class="galerie-component">
+    <h1 class="title white">{{obj.titre}}</h1>
+    <main class="main-content">
+      <div class="container-fluid photos">
+        <div class="row align-items-stretch evenement-wrapper-component">
+        {% for image in obj.galerieimage_set.all %}
+          <div class="grid-item">
+            <li class="d-block photo-item">
+              <img src="{{MEDIA_URL}}{{image.image}}" alt="Leoclimb Galerie{{obj.titre}}" loading="lazy" />
+            </li>
+          </div>
+        {% endfor %}
         </div>
-      {% endfor %}
       </div>
-    </div>
-  </main>
-</section>
+    </main>
+  </section>
 {% endblock %}

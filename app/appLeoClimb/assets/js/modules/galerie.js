@@ -2,6 +2,21 @@ import Masonry from "masonry-layout"
 import $ from "jquery"
 imagesLoaded.makeJQueryPlugin( $ );
 
+let grid = document.querySelector('.evenement-wrapper-component');
+if(grid){
+    $('.evenement-wrapper-component').imagesLoaded( function() {
+        document.body.classList.remove("loading")
+                var msnry = new Masonry( grid, {
+                    itemSelector: '.grid-item',
+                });
+    });
+
+}else{
+    $('section').imagesLoaded( function() {
+        document.body.classList.remove('loading')
+    });
+}
+
 /* plane color footer background in galerie and evenements pages */
 document.addEventListener('turbolinks:load', function(){
     if(document.querySelector(".galerie-component")){
@@ -11,11 +26,5 @@ document.addEventListener('turbolinks:load', function(){
             });
         })
         document.querySelector('.footer-component').style.background = "#22262a"
-        document.querySelector('.footer-component').style.padding = "50px 0"
-    
-        document.querySelector('.footer-component').style.background = "#22262a"
-        if(document.querySelectorAll('.photo-item').length === 3){
-            document.querySelector('.footer-component').style.padding = "100px 50px"
-        }
     }
 })

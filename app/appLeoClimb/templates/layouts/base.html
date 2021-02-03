@@ -8,6 +8,7 @@
         <meta name="description" content="{% block description %}{% endblock %}">
         <meta name="theme-color" content="#ffffff">
         <meta name="turbolinks-cache-control" content="no-cache">
+        {% block meta %} {% endblock %}
         <link rel="icon" href="{% static "images/logoNoir.jpg" %}">
         <link rel="stylesheet" href="{% static '/app.css' %}"><link>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,9 +20,9 @@
 
         gtag('config', 'G-JQ2D6GT3HS');
         </script>
-        <script defer src="{% static '/main.js' %}" data-turbolinks-eval="false"></script> 
+        <script defer src="{% static '/main.js' %}"></script> 
     </head>
-    <body class="on-top {% block bodycss %}{% endblock %}">
+    <body {% block bodyconf %}{% endblock %} class="on-top {% block bodycss %}{% endblock %}">
          <div id="loader">
             <div id="d1"></div>
             <div id="d2"></div>

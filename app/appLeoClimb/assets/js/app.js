@@ -1,4 +1,3 @@
-document.currentScript.setAttribute("data-turbolinks-eval", "false");
 var Turbolinks = require("turbolinks")
 Turbolinks.start()
 
