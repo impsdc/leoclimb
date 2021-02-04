@@ -5,7 +5,8 @@
     min-width: 135px;
     text-align: center;
     padding-bottom: 20px;
-
+    font-weight: 600;
+    
     @include max-screen($mobile){
         padding-bottom: 10px;
     }
