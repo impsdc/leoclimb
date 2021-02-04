@@ -71,6 +71,7 @@ body.loading::before{
 * {
   font-size: 100%;
   font-family: "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
  }
 
  a:hover{

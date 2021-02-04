@@ -3,7 +3,7 @@
     background-image: url('/static/images/bg_home.svg');
     background-size: cover;
     background-position: center bottom;
-    height: 750px;
+    height: 800px;
 
     @include max-screen(1300px){
         height: 820px;

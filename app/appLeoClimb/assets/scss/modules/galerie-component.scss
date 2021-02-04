@@ -8,14 +8,21 @@
         margin-bottom: 30px;
         color: #fff;
     }
-    
+
+    .photos{
+        padding: 0;
+    }
+
+    .row{
+        margin: auto;
+    }
 
     .grid-item{
 
         .photo-item{
             list-style: none;
         }
-        width: 32%;
+        width: calc(100% / 3 - 10px);
         margin: 0 5px;
 
         @include max-screen($mobile){

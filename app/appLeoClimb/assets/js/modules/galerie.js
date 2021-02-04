@@ -2,7 +2,7 @@ import Masonry from "masonry-layout"
 import $ from "jquery"
 imagesLoaded.makeJQueryPlugin( $ );
 
-let grid = document.querySelector('.evenement-wrapper-component');
+/* let grid = document.querySelector('.evenement-wrapper-component');
 if(grid){
     $('.evenement-wrapper-component').imagesLoaded( function() {
         document.body.classList.remove("loading")
@@ -15,7 +15,7 @@ if(grid){
     $('section').imagesLoaded( function() {
         document.body.classList.remove('loading')
     });
-}
+} */
 
 /* plane color footer background in galerie and evenements pages */
 document.addEventListener('turbolinks:load', function(){

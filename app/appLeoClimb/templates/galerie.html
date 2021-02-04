@@ -1,15 +1,12 @@
 {% extends "layouts/base.html" %}
 {% load static %}
-{% block bodyconf %}data-turbolinks="false"{% endblock %} 
-{% block bodycss %}loading{% endblock %} 
-{% block meta %}<meta name="turbolinks-visit-control" content="reload">{% endblock %}
 
 {% block title %}Leoclimb - Nos galeries photos{% endblock %}
 {% block description %}Consulter les photos de Leoclimb{% endblock %}
 {% block content %}
   <section class="galerie-component">
     <h1 class="title white">Galerie de Leoclimb</h1>
-        <div class="container-fluid photos">
+        <div class="container photos">
           <div class="row align-items-stretch evenement-wrapper-component">
             {% for galerie in obj %}
               <div class="grid-item">
