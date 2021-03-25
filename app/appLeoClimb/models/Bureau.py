@@ -8,7 +8,7 @@ class Bureau(TimespamtedModel):
     citation = models.CharField(max_length=160, blank=False, null=False)
     image = models.FileField(upload_to="bureau/", blank=True, null=True)
     insta = models.URLField(blank=True, null=True)
-    place = models.FloatField(blank=False, null=False, default=0, unique=True)
+    ordre = models.FloatField(blank=False, null=False, default=0, unique=True)
 
     def __str__(self):
         return self.nom

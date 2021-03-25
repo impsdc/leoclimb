@@ -3,6 +3,8 @@ from .Timespamted import TimespamtedModel
 
 class Galerie(TimespamtedModel):
     titre = models.CharField(max_length=100, blank=False, null=False)
+    ordre = models.FloatField(blank=False, null=True, unique=True)
+
 
     def __str__(self):
         return self.titre

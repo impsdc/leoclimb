@@ -15,7 +15,9 @@
          </div>
           <div class="wrapper-btn">
             <a class="main-btn-component" href={% url 'evenement' titre=obj.titre %}>Voir les photos</a>
-            <a class="main-btn-component" href={% url 'inscription'%}>Inscription</a>
+            {% if dcc %}
+              <a class="main-btn-component" href={% url 'inscription'%}>Inscription</a>
+            {% endif %}
           </div>
         </div>
         <div class="col-12 col-lg-4 banner-image">

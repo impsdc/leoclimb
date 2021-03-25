@@ -11,10 +11,12 @@
             <h1>{{accueil.subtitle}}</h1>
             <h2><strong>LeoClimb</strong><br>{{accueil.title}}</h2>
          </div>
-          <a class="main-btn-component" href="{% url 'inscription'%}">Inscription Devinci Climbing Contest</a>
+         {% if dcc %}
+            <a class="main-btn-component" href="{% url 'inscription'%}">Inscription Devinci Climbing Contest</a>
+          {% endif %}
         </div>
         <div class="col-12 col-lg-4 banner-image">
-          <img src="{% static "/images/leoclimb-association-escalade-logo.png" %}" />
+          <img src="{% static "/images/leoclimb-association-escalade-logo.png" %}" loading="lazy" alt="logo de leoclimb, association d'escalade"/>
         </div>
       </div>
     </div>
@@ -28,7 +30,7 @@
           nous découvrir et nous contacter via nos réseaux pour toutes informations et
           sponsonarisation !
         </p>
-      <img src="{% static "/images/leoclimb-association-escalade.jpg" %}"/>
+      <img src="{% static "/images/leoclimb-association-escalade.jpg" %}" loading="lazy"  alt="membres de Leoclimb, association d'escalade à la Défense"/>
     </section>
     <section class="main-home-text-component col-12">
         <h3 class="title">L'association en quelques voies</h3>
@@ -43,9 +45,9 @@
           soirées mémorables et d’une manière plus générale, des moments de partage pendant lesquels l’esprit du grimpeur n’est pas nécessairement
           aussi présent. Ainsi, les membres ont l’opportunité de renforcer les liens très forts qui existent déjà entre eux ou d’en tisser des nouveaux.</p>
         <div class="row contain-ic">
-          <img src="{% static "/ic/food.svg" %}" alt="association d'escalade" />
-          <img src="{% static "/ic/climb.svg" %}" alt="association d'escalade" />
-          <img src="{% static "/ic/beer.svg" %}" alt="association d'escalade" />
+          <img src="{% static "/ic/food.svg" %}" alt="association d'escalade" loading="lazy" alt="icon-escalade"/>
+          <img src="{% static "/ic/climb.svg" %}" alt="association d'escalade" loading="lazy" alt="icon-escalade"/>
+          <img src="{% static "/ic/beer.svg" %}" alt="association d'escalade" loading="lazy" alt="icon-escalade"/>
         </div>
         <h3 class="title">Nos objectifs</h3>
         <p>Nos objectifs sont la création d’un maximum d’événements à différentes échelles (séance libre, séance d'initiation ouvert à tous, participation à
@@ -60,18 +62,16 @@
       <h3 class="title">Nos Partenaires</h3>
         <div class="sponsor-slider-wrapper">
           <div class="slider-component">
-
             {% for partenaire in obj  %}
               <div class="item-slider">
               <div class="wrapper-logo">
-                  <img src="{{MEDIA_URL}}{{partenaire.logo}}" alt="logo partenaire" />
+                  <img src="{{MEDIA_URL}}{{partenaire.logo}}" loading="lazy" alt="logo partenaire" />
               </div>
                 <p>
                   {{partenaire.description}}
                 </p>
               </div>
             {% endfor %}
-
           </div>
           <div class="slider-btn-component">
             <div class="slider-btn-wrapper">
@@ -85,11 +85,11 @@
       <h3 class="title">Notre fondateur</h3>
       <div class="wrapper-fondateur col-12">
        <div class="col-md-6">
-          <img  class="image-fondateur" src="{% static '/images/aurelien-Grenet-de-Béchillon.jpg' %}" alt="Aurélien Grenet de Béchillon fondateur de léoclimb" titre="Aurélien Grenet de Béchillon" />
+          <img  class="image-fondateur" src="{% static '/images/aurelien-Grenet-de-Béchillon.jpg' %}" loading="lazy"  alt="Aurélien Grenet de Béchillon fondateur de léoclimb" titre="Aurélien Grenet de Béchillon" />
        </div>
         <div class="quote-component">
           <div class="first-quote">
-            <img src="{% static '/ic/quote_start.svg' %}" alt="quotes_start" />
+            <img src="{% static '/ic/quote_start.svg' %}" loading="lazy" alt="quotes_start" />
           </div>
           <p>
             J'ai souhaité créer cette association dans le but de regrouper
@@ -107,5 +107,46 @@
         </div>
       </div>
     </section>
+    {% if post %}
+    <section class="home-actualite-component">
+     <h3 class="title">Nos dernières actualités</h3>
+        <div class="contain-posts">
+          {% for post in post %}
+          <div class="single-article">
+              <div class="wrapper container">
+                  <div class="wrapper-item-blog">
+                      <div class="contain-image"> 
+                          <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{post.image}}"  id="open"/>
+                          <p class="more">
+                              Cliquer sur l'image pour mieux voir
+                          </p>
+                      </div>
+                      <div class="contain-description">
+                          <h2 class="blog-title">{{post.title}}</h2>
+                          <div class="wrapper-title-blog">
+                              <img src="{% static '/ic/date.svg'%}" alt="leoclimnb-date-blog" loading="lazy" />
+                              <span>Publié le </span>
+                              <p>{{post.date}}</p>
+                          </div>
+                          <p>{{ post.main}}</p>
+                      </div>        
+                  </div>
+                  <span class="separateur"></span>
+              <div class="modal-wrapper">
+                  <div class="modal-image">
+                      <div class="close">
+                          <span id="close">&times;</span>
+                      </div>
+                      <img alt='{{post.title}}' id="modal-content"/>
+                      <p class="caption">{{post.title}}</p>
+                  </div>
+              </div>
+              </div>
+          </div>
+          {% endfor %}
+        </div>
+          <a class="main-btn-component-inverse" href="{% url 'inscription'%}">Voir toutes nos actualités</a>
+    </section>
+    {% endif %}
   </div>
 {% endblock %}

@@ -10,8 +10,9 @@ services:
       - POSTGRES_PASSWORD=paultapedes7a
     volumes:
       - ./data:/var/lib/postgresql/data
+      - ./db-export:/home/db-export
     ports: 
-      - 5000:5432
+      - 5432:5432
    web:
     build: .
     ports:
@@ -26,3 +27,4 @@ services:
       - db:db
 volumes:
   data:
+  db-export:

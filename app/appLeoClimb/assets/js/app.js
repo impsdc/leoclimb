@@ -18,7 +18,7 @@ document.addEventListener('turbolinks:load', function(){
 })
 
 document.addEventListener('turbolinks:load', function(){
-    if(document.querySelector('.actualite-component')){
+    if(document.querySelector('.actualite-component') || document.querySelectorAll('.home-actualite-component')) {
         const instances = [];
         const article = [...document.querySelectorAll('.single-article')];
         article.map(item => instances.push(new Article(item)));

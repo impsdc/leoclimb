@@ -5,6 +5,8 @@ class Palmare(TimespamtedModel):
     titre = models.CharField(max_length=50, blank=False, null=False)
     date = models.DateField(blank=False, null=False)
     image = models.FileField(upload_to="palmares/", blank=True, null=True)
+    ordre = models.FloatField(blank=False, null=True, unique=True)
+
 
     def __str__(self):
         return self.titre
