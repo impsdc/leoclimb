@@ -87,8 +87,12 @@ height: 600px;
 
         p{
             font-size: 1.245rem;
-            margin: 0 20px;
+            margin: 10px;
             text-align: center;
+
+            @include max-screen($mobile){
+                text-align: justify;
+            }
         }
         
         }

@@ -91,6 +91,7 @@
 
         @include max-screen($mobile){
             margin-top: -50px;
+            text-align: justify;
         }
     }
 
@@ -109,6 +110,10 @@
         padding: 20px 0;
         text-align: center;
         margin: 0 auto;
+
+        @include max-screen($mobile){
+            text-align: justify;
+        }
     }
 
     .contain-ic{
@@ -145,7 +150,7 @@
             margin: 0 20px;
 
             @include max-screen($mobile){
-                margin: 20px 
+                margin: 20px ;
             }
     
             
@@ -160,6 +165,7 @@
             p{
                 font-size: 1.245rem;
                 margin: 20px 0;
+                text-align: justify;
             }
 
             h3{

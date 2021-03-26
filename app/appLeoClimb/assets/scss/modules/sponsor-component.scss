@@ -135,6 +135,10 @@
             margin: 60px auto;
             max-width: 1167px;
 
+            @include max-screen($mobile){
+                margin: 0;
+            }
+
             #sliderNext{
                 position: absolute;
                 top: 45%;
