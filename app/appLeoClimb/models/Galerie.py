@@ -5,6 +5,13 @@ class Galerie(TimespamtedModel):
     titre = models.CharField(max_length=100, blank=False, null=False)
     ordre = models.FloatField(blank=False, null=True, unique=True)
 
+    def clean(self, *args, **kwargs):
+        print('lol')
+        if self.ordre:
+            try:
+                Galerie.objects.filter(ordre=self.ordre).update(ordre=None)
+            except Galerie.DoesNotExist:
+                pass
 
     def __str__(self):
         return self.titre

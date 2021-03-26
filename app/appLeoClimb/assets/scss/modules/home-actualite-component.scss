@@ -19,7 +19,13 @@
                 align-items: center;  
                 flex-direction: column;    
                 width: 340px;
+                margin: 20px;
                 height: auto;
+
+                @include max-screen($mobile){
+                    width: 90%;
+                    margin: auto;
+                }
     
                 @include max-screen($small){
                     flex-direction: column;

@@ -8,7 +8,14 @@ class Bureau(TimespamtedModel):
     citation = models.CharField(max_length=160, blank=False, null=False)
     image = models.FileField(upload_to="bureau/", blank=True, null=True)
     insta = models.URLField(blank=True, null=True)
-    ordre = models.FloatField(blank=False, null=False, default=0, unique=True)
+    ordre = models.FloatField(blank=False, null=True, unique=True)
+
+    def clean(self, *args, **kwargs):
+        if self.ordre:
+            try:
+                Bureau.objects.filter(ordre=self.ordre).update(ordre=None)
+            except Bureau.DoesNotExist:
+                pass
 
     def __str__(self):
         return self.nom
