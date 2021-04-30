@@ -1,0 +1,19 @@
+1619781500848	geckodriver	INFO	Listening on 127.0.0.1:39747
+1619781501855	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefoPsz0"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:5990): GLib-GObject-CRITICAL **: 13:18:22.897: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:6011): GLib-GObject-CRITICAL **: 13:18:23.001: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619781503650	Marionette	INFO	Listening on port 33117
+1619781503677	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:6091): GLib-GObject-CRITICAL **: 13:18:23.924: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+JavaScript warning: https://www.leonard-de-vinci.net/min/g=login_js?v1.2.4, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.leonard-de-vinci.net/min/g=general_js?v1.2.9, line 580: unreachable code after return statement
+JavaScript warning: https://www.leonard-de-vinci.net/min/g=general_js?v1.2.9, line 580: unreachable code after return statement
+JavaScript warning: https://www.leonard-de-vinci.net/min/g=general_js?v1.2.9, line 580: unreachable code after return statement
+JavaScript warning: https://www.leonard-de-vinci.net/min/g=general_js?v1.2.9, line 580: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1619783348807	Marionette	INFO	Stopped listening on port 33117

@@ -11,6 +11,7 @@
 
     @include max-screen(1000px){
         height: 1100px;
+        background-position: initial;
     }
 
     @include max-screen($mobile){
@@ -19,8 +20,8 @@
 
     @include max-screen($phone){
         height: 820px;
-        background-position: left bottom;
     }
+    
     .row{
         align-items: center;
 
