@@ -61,6 +61,7 @@
 
                     @include max-screen($small){
                         flex-direction: column;
+                        justify-content: center;
                         opacity: 0;
                         height: 500px;
                         margin: 0;
@@ -86,11 +87,6 @@
                     width: 60%;
                     margin: auto;
                     height: 150px;
-
-                    @include max-screen($mobile){
-                        width: 80%;
-                        margin: 15px;
-                    }
 
                     a:hover{
                         opacity: 0.3;

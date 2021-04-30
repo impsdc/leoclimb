@@ -11,9 +11,11 @@
             <h1>{{accueil.subtitle}}</h1>
             <h2><strong>LeoClimb</strong><br>{{accueil.title}}</h2>
          </div>
-         {% if dcc %}
+          {% if dcc %}
             <a class="main-btn-component" href="{% url 'inscription'%}">Inscription Devinci Climbing Contest</a>
-          {% endif %}
+          {% else %}
+             <a class="main-btn-component" href="{% url 'actualites'%}">Nos actualités</a>
+          {% endif %} 
         </div>
         <div class="col-12 col-lg-4 banner-image">
           <img src="{% static "/images/leoclimb-association-escalade-logo.png" %}" loading="lazy" alt="logo de leoclimb, association d'escalade"/>
