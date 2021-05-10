@@ -13,7 +13,10 @@ class Post(TimespamtedModel):
     def is_available(self):
         temp = Post.objects.filter(accueil=True)
         if len(temp) >= 3:
-            return False
+            if self.accueil:
+                return False
+            else:
+                return True
         else:
             return True
 
