@@ -39,3 +39,8 @@ then in you ngnix conf render static folder
                 alias {path to manage.py}/static;
         }
 ```
+
+## Launching for production
+```
+docker-compose up -d --build
+```
