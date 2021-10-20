@@ -18,7 +18,7 @@
           {% endif %} 
         </div>
         <div class="col-12 col-lg-4 banner-image">
-          <img src="{% static "/images/leoclimb-association-escalade-logo.png" %}" loading="lazy" alt="logo de leoclimb, association d'escalade"/>
+          <img src="{{MEDIA_URL}}{{accueil.logo}}" loading="lazy" alt="logo de leoclimb, association d'escalade"/>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
           nous découvrir et nous contacter via nos réseaux pour toutes informations et
           sponsonarisation !
         </p>
-      <img src="{% static "/images/leoclimb-association-escalade.jpg" %}" loading="lazy"  alt="membres de Leoclimb, association d'escalade à la Défense"/>
+      <img src="{{MEDIA_URL}}{{accueil.image}}" loading="lazy"  alt="membres de Leoclimb, association d'escalade à la Défense"/>
     </section>
     <section class="main-home-text-component col-12">
         <h3 class="title">L'association en quelques voies</h3>

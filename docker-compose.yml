@@ -21,7 +21,7 @@ services:
       - "9000:8000"
     container_name: app-leoclimb
     command : bash -c "yes yes | bin/python3 manage.py collectstatic"
-#   command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: bash -c "bin/python3 manage.py migrate"
     command: bash -c "cd app/ && ../bin/gunicorn siteLeoClimb.wsgi:application --bind=0.0.0.0:8000"
     depends_on:
       - db

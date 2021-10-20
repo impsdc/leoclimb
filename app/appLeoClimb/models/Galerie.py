@@ -6,7 +6,6 @@ class Galerie(TimespamtedModel):
     ordre = models.FloatField(blank=False, null=True, unique=True)
 
     def clean(self, *args, **kwargs):
-        print('lol')
         if self.ordre:
             try:
                 Galerie.objects.filter(ordre=self.ordre).update(ordre=None)
