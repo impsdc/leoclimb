@@ -1,10 +1,22 @@
+<h1 align="center">
+ Leoclimb.fr
+</h1>
+
+[![leoclimb](demo.png)](https://leoclimb.fr)
+
+## Stacks
+- Django
+- Postgres
+- Docker-compose
+
+## Usefull commands
+
 ### Migrate dev db to db prod
 
 export existing local database :
 ```
-pg_dump -U username -h localhost databasename >> sqlfile.sql 
+pg_dump -U username -h localhost databasename >> sqldump.sql 
 ```
-pwd for postgres : paultapedes7a
 
 ### import db in container
 
@@ -26,7 +38,7 @@ docker exec -it leoclimb-db bash
 psql -U paul -d leoclimb -U paul -f db-export
 ```
 
-## Static files for productions
+### Static files for productions
 
 ```
 python3 manage.py collectstatic
@@ -40,7 +52,7 @@ then in you ngnix conf render static folder
         }
 ```
 
-## Launching for production
+### Launching for production
 ```
 docker-compose up -d --build
 ```
