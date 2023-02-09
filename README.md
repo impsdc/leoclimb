@@ -15,7 +15,7 @@
 
 export existing local database :
 ```
-pg_dump -U username -h localhost databasename >> sqldump.sql 
+docker exec -i pg_container_name /bin/bash -c "PGPASSWORD=pg_password pg_dump --username pg_username database_name" > /desired/path/on/your/machine/dump.sql
 ```
 
 ### import db in container
